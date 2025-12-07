@@ -1,299 +1,342 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Shahzad Rajput152 Construction Company — Luxury Builder Lahore</title>
-<meta name="description" content="Shahzad Rajput152 Construction Company — Premium construction, architecture & turnkey finishing in Lake City, Lahore. Grey structure, turnkey projects, interior design and 3D elevations.">
-<meta name="theme-color" content="#0b0b0b" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shahzad Rajput152 Construction Company | Luxury Builder Lahore</title>
 
 <style>
-  /* ========== VARIABLES ========== */
-  :root{
-    --bg:#070707;
-    --panel:#111;
-    --muted:#bdbdbd;
-    --gold:#d4ab3d;
-    --accent:#c9a742;
-    --maxw:1200px;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Inter, Poppins, system-ui, -apple-system, "Segoe UI", Roboto, Arial; background:var(--bg); color:#fff; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
-  a{color:inherit}
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  color: #fff;
+}
 
-  /* ========== NAV ========== */
-  header{
-    position:sticky;top:0;z-index:60;
-    backdrop-filter: blur(6px);
-    background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.35));
-    border-bottom:1px solid rgba(212,171,61,0.08);
-  }
-  .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-  .brand{display:flex;align-items:center;gap:12px}
-  .logo-svg{width:56px;height:56px;flex-shrink:0}
-  .brand-title{display:flex;flex-direction:column;line-height:1}
-  .brand-title .name{color:var(--gold);font-weight:800;font-size:18px;letter-spacing:0.6px}
-  .brand-title .tag{font-size:12px;color:var(--muted);margin-top:2px}
-  nav .links{display:flex;gap:20px;align-items:center}
-  nav .links a{color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:8px;border-radius:6px}
-  nav .links a:hover{color:var(--gold);background:rgba(212,171,61,0.03)}
+h1, h2, h3 { margin: 0; font-weight: 600; }
 
-  /* mobile nav */
-  .nav-toggle{display:none;background:transparent;border:0;color:#fff;font-size:20px}
-  @media (max-width:880px){nav .links{display:none}.nav-toggle{display:block}}
+section { padding: 70px 20px; max-width: 1200px; margin: auto; }
 
-  /* ========== HERO ========== */
-  .hero{
-    min-height:78vh;
-    display:flex;align-items:center;
-    position:relative;overflow:hidden;background:#000;
-  }
-  .hero::before{
-    content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.7));
-    pointer-events:none;z-index:1;
-  }
-  .hero-media{
-    position:absolute;inset:0;background-size:cover;background-position:center center;filter:brightness(0.55);z-index:0;
-    /* default: replace with images/hero.jpg */
-    background-image: url('images/hero.jpg');
-  }
-  .hero-inner{position:relative;z-index:2;width:100%;text-align:center;padding:40px 20px}
-  .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(212,171,61,0.08);color:var(--gold);font-weight:700;margin-bottom:18px}
-  .hero h1{font-size:40px;color:var(--gold);margin:0;line-height:1.02;text-transform:uppercase;letter-spacing:1px}
-  .hero p{color:var(--muted);margin-top:14px;font-size:17px;max-width:850px;margin-left:auto;margin-right:auto}
-  .cta-row{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .btn-primary{background:var(--gold);color:#000;padding:12px 22px;border-radius:8px;font-weight:800;text-decoration:none}
-  .btn-ghost{border:1px solid rgba(255,255,255,0.06);padding:10px 18px;border-radius:8px;color:#fff;text-decoration:none}
-  .hero-stats{display:flex;gap:28px;justify-content:center;margin-top:36px}
-  .stat{color:var(--muted);text-align:center}
-  .stat strong{display:block;color:var(--gold);font-size:20px}
+/* HEADER */
+header {
+  background: #000;
+  border-bottom: 2px solid #b29149;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  /* ========== SECTIONS ========== */
-  section{padding:64px 0}
-  .section-title{text-align:center;color:var(--gold);font-size:26px;margin-bottom:18px}
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #b29149;
+}
 
-  /* SERVICES */
-  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
-  .svc{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01)); padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .28s, box-shadow .28s}
-  .svc:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(0,0,0,0.6);border-color:rgba(212,171,61,0.12)}
-  .svc h3{color:var(--gold);margin-bottom:8px}
-  .svc p{color:var(--muted);font-size:14px}
+nav a {
+  color: #fff;
+  font-size: 15px;
+  margin-left: 22px;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover { color: #b29149; }
 
-  /* PROJECTS */
-  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-  .project{height:220px;border-radius:12px;background-size:cover;background-position:center;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
-  .project::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.0),rgba(0,0,0,0.5))}
-  .project-label{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.5);padding:8px 12px;border-radius:8px;color:var(--gold);font-weight:700}
+/* HERO SECTION */
+.hero {
+  height: 90vh;
+  background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1700&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-  /* TESTIMONIAL / CTA BAR */
-  .cta-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px;border-radius:12px;background:linear-gradient(90deg, rgba(212,171,61,0.04), rgba(255,255,255,0.01));border:1px solid rgba(212,171,61,0.06)}
-  .cta-bar p{margin:0;color:var(--muted)}
-  .cta-bar .bar-cta{background:var(--gold);padding:12px 18px;border-radius:8px;color:#000;font-weight:700;text-decoration:none}
+.hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.55);
+}
 
-  /* CONTACT */
-  .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:20px}
-  .contact-card{background:var(--panel);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-  .contact-card p{color:var(--muted);margin:8px 0}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
 
-  /* FOOTER */
-  footer{padding:34px 0;color:#bdbdbd;text-align:center;border-top:1px solid rgba(255,255,255,0.02);margin-top:40px}
+.hero h1 {
+  font-size: 45px;
+  color: #b29149;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-  /* small screens */
-  @media (max-width:900px){
-    .hero h1{font-size:28px}
-    .hero-stats{flex-direction:column;gap:8px}
-    .contact-grid{grid-template-columns:1fr}
-    .nav .links{display:none}
-    .nav-toggle{display:block}
-  }
+.hero p {
+  margin-top: 12px;
+  font-size: 19px;
+  color: #e6e6e6;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 14px 28px;
+  color: #000;
+  background: #b29149;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 6px;
+  letter-spacing: .4px;
+}
+.btn:hover { filter: brightness(1.2); }
+
+/* SERVICES */
+.services-title {
+  color: #b29149;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 25px;
+}
+
+.service-box {
+  background: #111;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+.service-box:hover {
+  border-color: #b29149;
+  transform: translateY(-6px);
+}
+.service-box h3 {
+  color: #b29149;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.service-box p { color:#ccc; }
+
+/* PROJECTS */
+.projects-title {
+  color: #b29149;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 22px;
+}
+
+.project {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  overflow:hidden;
+  box-shadow: 0 0 12px #000;
+}
+.project::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.35);
+}
+.project span {
+  position:absolute;
+  bottom:12px;
+  left:12px;
+  background: rgba(0,0,0,0.7);
+  padding: 6px 14px;
+  border-radius: 6px;
+  color:#b29149;
+  font-weight:700;
+  font-size:14px;
+}
+
+/* ABOUT */
+.about-title {
+  color: #b29149;
+  text-align:center;
+  font-size:32px;
+  margin-bottom:25px;
+}
+
+.about-text {
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  color:#ccc;
+  font-size:17px;
+  line-height:1.7;
+}
+
+/* CONTACT */
+.contact-box {
+  background:#111;
+  padding:35px;
+  border-radius:12px;
+  border:1px solid #222;
+  max-width:700px;
+  margin:auto;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width:100%;
+  padding:14px;
+  background:#0a0a0a;
+  border:1px solid #333;
+  border-radius:6px;
+  margin-top:10px;
+  color:#fff;
+}
+
+.contact-box button {
+  width:100%;
+  padding:14px;
+  background:#b29149;
+  border:none;
+  margin-top:15px;
+  font-size:16px;
+  font-weight:700;
+  color:#000;
+  border-radius:6px;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:25px;
+  background:#000;
+  margin-top:50px;
+  color:#777;
+  border-top:1px solid #222;
+}
 </style>
 </head>
+
 <body>
 
-<!-- NAV -->
 <header>
-  <div class="container nav">
-    <div class="brand">
-      <!-- inline SVG logo (gold circle with SR) -->
-      <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="g2" x1="0" x2="1">
-            <stop offset="0" stop-color="#f0cf7c"/>
-            <stop offset="1" stop-color="#b8862d"/>
-          </linearGradient>
-        </defs>
-        <circle cx="50" cy="50" r="48" fill="url(#g2)"/>
-        <text x="50%" y="58%" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="34" fill="#081018">SR</text>
-      </svg>
-
-      <div class="brand-title">
-        <div class="name">Shahzad Rajput152</div>
-        <div class="tag">Construction Company</div>
-      </div>
-    </div>
-
-    <nav aria-label="Main navigation">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks" onclick="toggleNav()">☰</button>
-      <div id="navLinks" class="links">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
+  <div class="logo">SR152 CONSTRUCTION</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero" role="banner" aria-label="Hero">
-  <div class="hero-media" aria-hidden="true"></div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Shahzad Rajput152 Construction Company</h1>
+    <p>Premium Construction • Architecture • Luxury Finishing</p>
+    <a class="btn" href="#contact">Get Free Consultation</a>
+  </div>
+</section>
 
-  <div class="hero-inner container">
-    <div style="max-width:900px;margin:0 auto">
-      <div class="eyebrow">Premium • Trusted • Local</div>
-      <h1>Shahzad Rajput152 Construction Company</h1>
-      <p>Top-tier construction & architectural services in Lake City, Lahore. Grey structure, turnkey finishing, interior design and 3D elevations — delivered with craftsmanship and transparency.</p>
+<section id="services">
+  <h2 class="services-title">Our Premium Services</h2>
+  <div class="services-grid">
 
-      <div class="cta-row">
-        <a class="btn-primary" href="#contact">Get Free Consultation</a>
-        <a class="btn-ghost" href="#projects">See Projects</a>
-      </div>
+    <div class="service-box">
+      <h3>Grey Structure Construction</h3>
+      <p>Premium quality material and engineering.</p>
+    </div>
 
-      <div class="hero-stats" style="margin-top:34px;justify-content:center">
-        <div class="stat"><strong>150+</strong><div style="color:var(--muted)">Projects Delivered</div></div>
-        <div class="stat"><strong>10+</strong><div style="color:var(--muted)">Years Experience</div></div>
-        <div class="stat"><strong>98%</strong><div style="color:var(--muted)">Client Satisfaction</div></div>
-      </div>
+    <div class="service-box">
+      <h3>Turnkey Construction</h3>
+      <p>Luxury finishing with high-end interiors.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Architectural Design</h3>
+      <p>Modern, classic & premium house designs.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Interior Design</h3>
+      <p>Luxury kitchens, wardrobes, ceilings & lighting.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>3D Elevations & Plans</h3>
+      <p>Realistic visuals and structural drawings.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Renovation & Remodeling</h3>
+      <p>Transforming old homes into luxury spaces.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="projects-title">Recent Projects</h2>
+
+  <div class="projects-grid">
+    <div class="project" style="background-image:url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800');">
+      <span>10 Marla Modern House</span>
+    </div>
+
+    <div class="project" style="background-image:url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=800');">
+      <span>1 Kanal Luxury Villa</span>
+    </div>
+
+    <div class="project" style="background-image:url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800');">
+      <span>Renovation Project</span>
+    </div>
+
+    <div class="project" style="background-image:url('https://images.unsplash.com/photo-1499955085172-a104c9463ece?auto=format&fit=crop&w=800');">
+      <span>Commercial Project</span>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" aria-labelledby="svchead">
-  <div class="container">
-    <h2 id="svchead" class="section-title">What We Do</h2>
-    <div class="services">
-      <div class="svc"><h3>Grey Structure</h3><p>Strong foundations, reliable civil work and structural integrity.</p></div>
-      <div class="svc"><h3>Turnkey Construction</h3><p>Complete project delivery including luxury finishes & QA handover.</p></div>
-      <div class="svc"><h3>Architectural Design</h3><p>Unique elevations, smart planning and compliant drawings.</p></div>
-      <div class="svc"><h3>Interior Fit-Out</h3><p>High-end kitchens, wardrobes, lighting and bespoke millwork.</p></div>
-      <div class="svc"><h3>3D Elevations & Plans</h3><p>Realistic renders and technical drawings for accurate execution.</p></div>
-      <div class="svc"><h3>Renovation</h3><p>Remodeling and value-driven renovations for modern living.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" aria-labelledby="projhead">
-  <div class="container">
-    <h2 id="projhead" class="section-title">Recent Projects</h2>
-
-    <div class="projects-grid" aria-live="polite">
-      <!-- Replace image URLs with your uploaded images -->
-      <div class="project" style="background-image:url('images/project1.jpg')"><div class="project-label">Modern Villa</div></div>
-      <div class="project" style="background-image:url('images/project2.jpg')"><div class="project-label">Luxury Interior</div></div>
-      <div class="project" style="background-image:url('images/project3.jpg')"><div class="project-label">Turnkey Project</div></div>
-      <div class="project" style="background-image:url('images/project4.jpg')"><div class="project-label">Grey Structure</div></div>
-      <div class="project" style="background-image:url('images/project5.jpg')"><div class="project-label">Commercial Fitout</div></div>
-      <div class="project" style="background-image:url('images/project6.jpg')"><div class="project-label">Renovation</div></div>
-    </div>
-
-    <div style="text-align:center;margin-top:26px">
-      <a class="btn-ghost" href="#contact">Request Quote</a>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAR -->
-<section class="container" style="margin-top:36px">
-  <div class="cta-bar">
-    <p><strong style="color:var(--gold)">Get a Free Consultation</strong> — Share your site plan or call on WhatsApp and get a fast quote.</p>
-    <a class="bar-cta" href="#contact">Message on WhatsApp</a>
-  </div>
-</section>
-
-<!-- ABOUT -->
 <section id="about">
-  <div class="container">
-    <h2 class="section-title">About Shahzad Rajput152</h2>
-    <p style="max-width:920px;margin:12px auto 0;color:var(--muted);text-align:center;font-size:16px">
-      Shahzad Rajput152 Construction Company is a Lahore-based premium construction & architectural firm specializing in residential and commercial projects in Lake City, DHA and Bahria town. We combine engineering discipline with aesthetic design to deliver projects on time and within budget.
-    </p>
-  </div>
+  <h2 class="about-title">About Us</h2>
+  <p class="about-text">
+    Shahzad Rajput152 Construction Company is a premium construction and architectural firm based in Lake City Lahore.
+    We specialize in luxury homes, turnkey projects, interior designing, 3D elevations, and modern architectural planning.
+    Our commitment is quality, honesty, and world-class finishing.
+  </p>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-  <div class="container">
-    <h2 class="section-title">Contact Us</h2>
+  <h2 class="projects-title">Contact Us</h2>
+  <div class="contact-box">
 
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3 style="color:var(--gold)">Let's talk</h3>
-        <p style="color:var(--muted)">Share your project details on WhatsApp for a quick response.</p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/923032609097" target="_blank" rel="noopener">+92 303 2609097</a></p>
-        <p><strong>Email:</strong> <a href="mailto:shahzad152152@gmail.com">shahzad152152@gmail.com</a></p>
-        <p><strong>Address:</strong> Lake City, Lahore</p>
-      </div>
+    <p><strong>WhatsApp:</strong> +92 303 2609097</p>
+    <p><strong>Email:</strong> shahzad152152@gmail.com</p>
+    <p><strong>Address:</strong> Lake City, Lahore, Pakistan</p>
 
-      <div class="contact-card" aria-label="Contact form">
-        <form id="leadForm">
-          <label class="sr-only" for="name">Name</label>
-          <input id="name" name="name" placeholder="Your Name" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;margin-bottom:10px">
-          <input id="phone" name="phone" placeholder="Phone / WhatsApp" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;margin-bottom:10px">
-          <textarea id="message" name="message" rows="4" placeholder="Brief project details..." style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;margin-bottom:10px"></textarea>
-          <button type="submit" style="background:var(--gold);border:0;padding:12px 18px;border-radius:8px;font-weight:800;cursor:pointer">Send Inquiry</button>
-          <p id="formMsg" style="margin-top:10px;color:var(--muted);font-size:14px"></p>
-        </form>
-      </div>
-    </div>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="text" placeholder="Phone / WhatsApp" required />
+      <textarea placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    © <span id="year"></span> Shahzad Rajput152 Construction Company — Premium Builders Lahore · All rights reserved
-  </div>
+  © 2025 Shahzad Rajput152 Construction Company — Premium Builders Lahore
 </footer>
-
-<script>
-  // set current year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // simple mobile toggle
-  function toggleNav(){
-    const links = document.getElementById('navLinks');
-    const expanded = links.style.display === 'flex';
-    links.style.display = expanded ? 'none' : 'flex';
-  }
-
-  // simple form handler (mailto fallback)
-  document.getElementById('leadForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const n = document.getElementById('name').value.trim();
-    const p = document.getElementById('phone').value.trim();
-    const m = document.getElementById('message').value.trim();
-    if(!n || !p || !m){ document.getElementById('formMsg').textContent = 'Please fill all fields.'; return; }
-    const subject = encodeURIComponent('Website Inquiry from ' + n);
-    const body = encodeURIComponent(`Name: ${n}\nPhone: ${p}\n\nMessage:\n${m}`);
-    window.location.href = `mailto:shahzad152152@gmail.com?subject=${subject}&body=${body}`;
-    document.getElementById('formMsg').textContent = 'Opening your email client...';
-    this.reset();
-  });
-
-  // If hero.jpg missing — substitute a gradient
-  (function(){
-    const hero = document.querySelector('.hero-media');
-    // if image not found or 404, browser won't notify — we provide fallback: check computed background-image
-    const bg = getComputedStyle(hero).backgroundImage;
-    if(!bg || bg === 'none' || bg.indexOf('hero.jpg') === -1){
-      // use css gradient fallback
-      hero.style.backgroundImage = 'linear-gradient(180deg, rgba(10,10,10,1), rgba(20,20,20,1))';
-      hero.style.backgroundSize = 'cover';
-    }
-  })();
-</script>
 
 </body>
 </html>
