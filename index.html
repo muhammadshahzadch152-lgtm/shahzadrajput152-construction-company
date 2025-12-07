@@ -1,161 +1,97 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shahzad Rajput152 Construction Company — Luxury Builders Lahore</title>
-  <style>
-    :root{
-      --gold:#b29149;
-      --bg:#0e0e0e;
-      --card:#121212;
-      --muted:#cfcfcf;
-      --accent:#f6e7c3;
-      --radius:12px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: "Poppins",system-ui,Segoe UI,Arial;
-      background:var(--bg);
-      color: #fff;
-      -webkit-font-smoothing:antialiased;
-    }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Shahzad Rajput152 Construction Company — Premium Builders Lahore</title>
+<meta name="description" content="Shahzad Rajput152 Construction Company — Premium construction, turnkey finishing & architecture — Lake City Lahore.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#b29149;
+    --gold-2:#b07f2a;
+    --bg:#0b0b0b;
+    --card:#0f0f0f;
+    --muted:#cfcfcf;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Poppins",sans-serif;background:var(--bg);color:#fff;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
 
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 24px;
-      border-bottom:2px solid rgba(178,145,73,0.12);
-      background:rgba(0,0,0,0.3);
-      position:sticky;
-      top:0;
-      z-index:40;
-    }
-    .logo{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .logo img{height:44px; width:auto; border-radius:6px; object-fit:contain}
-    .brand{
-      color:var(--gold);
-      font-weight:700;
-      letter-spacing:1px;
-      font-size:18px;
-    }
-    nav a{color:#ddd; text-decoration:none; margin-left:18px; font-size:14px}
-    nav a:hover{color:var(--gold)}
+  /* header */
+  header{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(0,0,0,0.4);backdrop-filter: blur(4px);border-bottom:2px solid rgba(178,145,73,0.06)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .logo-mark{width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--gold-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#070707}
+  .brand .title{font-weight:800;color:var(--gold);letter-spacing:1px}
+  nav{display:flex;gap:16px}
+  nav a{color:#eee;padding:8px 10px;border-radius:8px;font-weight:600}
+  nav a:hover{color:var(--gold)}
 
-    /* HERO / SLIDER */
-    .hero {
-      position:relative;
-      height:520px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-      border-bottom:1px solid rgba(255,255,255,0.03);
-    }
-    .hero .slide{
-      position:absolute;
-      inset:0;
-      background-size:cover;
-      background-position:center;
-      transition:opacity .9s ease;
-      opacity:0;
-      filter:brightness(.45) contrast(.9);
-    }
-    .hero .slide.show{ opacity:1; }
-    .hero .overlay{
-      position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.6));
-    }
-    .hero .content{
-      position:relative; z-index:5; text-align:center; padding:0 20px;
-    }
-    .hero h1{
-      font-size:44px; color:var(--gold); margin:0; text-transform:uppercase; letter-spacing:1px;
-      text-shadow:0 6px 24px rgba(0,0,0,0.6);
-    }
-    .hero p{ color:#ddd; margin-top:12px; font-size:16px; max-width:900px; margin-left:auto; margin-right:auto}
-    .cta{
-      display:inline-block; margin-top:18px; padding:12px 26px; background:var(--gold); color:#000; border-radius:10px; font-weight:700; text-decoration:none;
-      box-shadow:0 8px 30px rgba(178,145,73,0.14);
-    }
+  /* hero */
+  .hero{position:relative;height:76vh;min-height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .hero .slide{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity .9s ease;opacity:0;filter:contrast(.95)}
+  .hero .slide.show{opacity:1}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.6));z-index:2}
+  .hero .inner{position:relative;z-index:4;text-align:center;padding:0 24px}
+  .hero h1{font-size:40px;color:var(--gold);margin:0;text-transform:uppercase;letter-spacing:1px}
+  .hero p{color:#eee;margin-top:12px;max-width:920px}
+  .hero .ctas{margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{padding:12px 22px;border-radius:10px;font-weight:800;cursor:pointer}
+  .btn-primary{background:linear-gradient(90deg,var(--gold),var(--gold-2));color:#000;box-shadow:0 16px 40px rgba(178,145,73,0.12)}
+  .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff}
 
-    section{padding:50px 20px; max-width:1200px; margin:0 auto}
+  /* main panel */
+  main{margin-top:-80px;padding-top:80px}
+  .panel{max-width:var(--maxw);margin:0 auto;padding:36px 20px;border-top-left-radius:20px;border-top-right-radius:20px;background:linear-gradient(180deg,#0b0b0b,#060606)}
+  .ribbon{display:flex;gap:12px;align-items:center;justify-content:center;margin-bottom:20px}
+  .ribbon .badge{background:var(--gold);color:#000;padding:8px 12px;border-radius:8px;font-weight:800}
 
-    h2.section-title{color:var(--gold); text-align:center; font-size:32px; margin-bottom:18px}
+  .section-title{color:var(--gold);text-align:center;font-size:28px;margin:8px 0 18px}
 
-    /* services */
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:18px;
-      margin-top:10px;
-    }
-    .service{
-      background:linear-gradient(180deg,var(--card),#151515);
-      border:1px solid rgba(255,255,255,0.03);
-      padding:22px;
-      border-radius:12px;
-      box-shadow:0 6px 30px rgba(0,0,0,0.6);
-    }
-    .service h3{color:var(--gold); margin-bottom:8px}
-    .service p{color:var(--muted); font-size:14px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .svc{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+  .svc h3{color:var(--gold);margin:0 0 8px}
+  .svc p{color:var(--muted);margin:0}
 
-    /* Projects */
-    .projects-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:16px;
-      margin-top:14px;
-    }
-    .project{
-      height:160px; border-radius:12px; overflow:hidden; position:relative; background:#222;
-      box-shadow:0 6px 30px rgba(0,0,0,0.6);
-    }
-    .project img{width:100%; height:100%; object-fit:cover; display:block}
-    .project .label{
-      position:absolute; left:10px; bottom:10px; background:rgba(0,0,0,0.55); color:var(--gold); padding:8px 12px; border-radius:8px; font-weight:600;
-    }
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
+  .project{position:relative;height:170px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+  .project img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+  .project:hover img{transform:scale(1.06)}
+  .project .label{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.55);padding:8px 12px;border-radius:8px;color:var(--gold);font-weight:700}
 
-    /* About */
-    .about p{max-width:900px; margin:0 auto; color:#ccc; text-align:center; font-size:15px}
+  .about p{color:#d0d0d0;text-align:center;max-width:900px;margin:0 auto}
 
-    /* contact */
-    .contact-box{background:linear-gradient(180deg,#141414,#0f0f0f); border-radius:12px; padding:20px; border:1px solid rgba(255,255,255,0.03)}
-    .contact-row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
-    .contact-box input, .contact-box textarea{width:100%; padding:12px; border-radius:8px; border:1px solid #333; background:#0c0c0c; color:#fff}
-    .contact-box button{margin-top:10px; width:100%; padding:12px; background:var(--gold); border:none; color:#000; font-weight:700; border-radius:8px}
+  .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:16px;margin-top:18px}
+  .contact-card{background:linear-gradient(180deg,#0f0f0f,#0b0b0b);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+  .contact-card p{color:var(--muted);margin:8px 0}
+  input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #222;background:#070707;color:#fff;margin-top:8px}
+  .contact-card button{background:var(--gold);color:#000;border:none;padding:12px;border-radius:8px;font-weight:800;cursor:pointer;margin-top:12px;width:100%}
 
-    /* footer */
-    footer{padding:22px; text-align:center; color:#aaa; background:#000; margin-top:36px}
+  .map-wrap{margin-top:18px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.04)}
+  .map-actions{display:flex;gap:10px;justify-content:center;margin-top:10px}
 
-    /* responsive */
-    @media(max-width:720px){
-      .hero{height:420px}
-      .hero h1{font-size:28px}
-      .contact-row{grid-template-columns:1fr}
-    }
+  footer{padding:22px;text-align:center;color:#9b9b9b;margin-top:30px;background:#050505}
 
-    /* small slideshow dots */
-    .dots{position: absolute; bottom:18px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:10}
-    .dots button{width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,0.3)}
-    .dots button.active{background:var(--gold)}
-  </style>
+  /* whatsapp pill */
+  .wa-pill{position:fixed;left:16px;bottom:16px;background:var(--gold);color:#000;padding:12px 16px;border-radius:999px;font-weight:800;z-index:200;box-shadow:0 18px 40px rgba(0,0,0,0.25);display:flex;gap:10px;align-items:center}
+
+  @media(max-width:900px){
+    .contact-grid{grid-template-columns:1fr}
+    nav{display:none}
+    .hero h1{font-size:28px}
+  }
+</style>
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <!-- Logo: put your logo image in assets/logo.png (optional). If not present brand text will show -->
-      <img src="assets/logo.png" alt="logo" onerror="this.style.display='none'">
-      <div class="brand">SHAHZAD RAJPUT152</div>
+    <div class="brand">
+      <div class="logo-mark">SR</div>
+      <div class="title">Shahzad Rajput152</div>
     </div>
 
-    <nav>
+    <nav aria-label="Main">
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
@@ -163,174 +99,176 @@
     </nav>
   </header>
 
-  <!-- HERO / SLIDESHOW -->
-  <section class="hero" aria-hidden="false">
-    <!-- slides inserted by JS -->
-    <div class="overlay"></div>
-    <div class="content">
+  <!-- HERO SLIDER -->
+  <section class="hero" aria-label="Hero">
+    <!-- slides (inserted by JS) -->
+    <div class="inner">
       <h1>Shahzad Rajput152 Construction Company</h1>
-      <p>Premium Construction • Architecture • Luxury Finishing — Lake City Lahore</p>
-      <a class="cta" href="#contact">Get Free Consultation</a>
-    </div>
-    <div class="dots" id="dots"></div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <h2 class="section-title">Our Luxury Services</h2>
-    <div class="services-grid">
-      <div class="service">
-        <h3>Grey Structure Construction</h3>
-        <p>Premium quality materials, licensed engineering and strict QA controls.</p>
-      </div>
-      <div class="service">
-        <h3>Turnkey Construction</h3>
-        <p>Complete interior finishing with high-end fixtures and workmanship.</p>
-      </div>
-      <div class="service">
-        <h3>Architectural Design</h3>
-        <p>Modern & classical elevations and detailed structural drawings.</p>
-      </div>
-      <div class="service">
-        <h3>Interior Designing</h3>
-        <p>Luxury kitchens, wardrobes, ceilings and lighting solutions.</p>
-      </div>
-      <div class="service">
-        <h3>3D Elevation & Plans</h3>
-        <p>Photo-real visualizations and construction-ready plans.</p>
-      </div>
-      <div class="service">
-        <h3>Renovation & Remodeling</h3>
-        <p>Transforming older homes into premium modern spaces.</p>
+      <p>Premium Construction &amp; Architectural Services in Pakistan — We specialize in 10 Marla to 1 Kanal modern & luxury homes.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#contact">Get Free Consultation</a>
+        <a class="btn btn-ghost" href="#projects">View Projects</a>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2 class="section-title">Recent Projects</h2>
+  <main class="panel">
+    <div class="ribbon"><div class="badge">5 YEARS</div><div style="color:#fff;font-weight:700">Comprehensive Warranty — Turnkey Projects</div></div>
+
+    <h2 id="services" class="section-title">Our Luxury Services</h2>
+    <div class="services">
+      <div class="svc"><h3>Grey Structure Construction</h3><p>Premium materials, licensed engineering and strict quality controls.</p></div>
+      <div class="svc"><h3>Turnkey Construction</h3><p>Complete finishing, MEP & interiors — handover-ready homes.</p></div>
+      <div class="svc"><h3>Architectural Design</h3><p>Modern & classical elevations and construction-ready 3D plans.</p></div>
+      <div class="svc"><h3>Interior Designing</h3><p>Luxury kitchens, wardrobes, ceiling treatments & lighting design.</p></div>
+      <div class="svc"><h3>3D Elevation & Plans</h3><p>Photo-real renders and detailed drawings for approvals.</p></div>
+      <div class="svc"><h3>Renovation & Remodeling</h3><p>Turn old spaces into modern, premium living areas.</p></div>
+    </div>
+
+    <h2 id="projects" class="section-title">Recent Projects</h2>
     <div class="projects-grid" id="projectsGrid">
-      <!-- JS will populate -->
+      <!-- JS populates projects using your uploaded Project-1.. files -->
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2 class="section-title">About Us</h2>
-    <div class="about">
-      <p>
-        Shahzad Rajput152 Construction Company is a premium construction and architectural firm based in Lake City Lahore. We specialize in luxury houses, turnkey projects & modern architecture with a commitment to quality, honesty and innovation.
-      </p>
-    </div>
-  </section>
+    <h2 id="about" class="section-title">About Us</h2>
+    <div class="about"><p>Shahzad Rajput152 Construction Company is a premium construction and architectural firm based in Lake City, Lahore. We deliver luxury homes, turnkey solutions and modern architecture with transparency, timeline focus and quality finishes.</p></div>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="contact-box">
-      <p><strong>WhatsApp:</strong> +92 303 2609097</p>
-      <p><strong>Email:</strong> shahzad152152@gmail.com</p>
-      <p><strong>Address:</strong> Lake City, Lahore, Pakistan</p>
-
-      <form onsubmit="alert('Form demo — use action to send in production'); return false;">
-        <div class="contact-row">
-          <input type="text" placeholder="Your Name" required>
-          <input type="text" placeholder="Phone / WhatsApp" required>
+    <h2 id="contact" class="section-title">Contact & Visit</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3 style="color:var(--gold);margin:0 0 8px">Get a Free Consultation</h3>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/923032609097" target="_blank">+92 303 2609097</a></p>
+        <p><strong>Email:</strong> <a href="mailto:shahzad152152@gmail.com">shahzad152152@gmail.com</a></p>
+        <p><strong>Address:</strong> Lake City, Lahore, Pakistan</p>
+        <div class="map-wrap" id="mapWrap">
+          <!-- iframe map will be injected by JS -->
         </div>
-        <textarea placeholder="Your message..." rows="4" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+        <div class="map-actions">
+          <a class="btn btn-ghost" id="openMap" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-primary" id="directions" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <form id="leadForm">
+          <input name="name" placeholder="Your Name" required />
+          <input name="phone" placeholder="Phone / WhatsApp" required />
+          <textarea name="message" rows="5" placeholder="Brief project details..." required></textarea>
+          <button type="submit">Send Inquiry</button>
+          <p id="formMsg" style="color:var(--muted);margin-top:8px;font-size:14px"></p>
+        </form>
+      </div>
     </div>
-  </section>
+
+  </main>
 
   <footer>© <span id="year"></span> Shahzad Rajput152 Construction Company — Premium Builders Lahore</footer>
 
-  <script>
-    // ====== CONFIG: change file names here if needed ======
-    // Put all your uploaded filenames (inside assets folder) in this array.
-    // Example names based on your uploads. If your filenames differ, edit them exactly.
-    const images = [
-      "assets/IMG_5768.jpeg",
-      "assets/IMG_5770.jpeg",
-      "assets/IMG_5771.jpeg",
-      "assets/IMG_5772.jpeg",
-      "assets/IMG_5773.jpeg",
-      "assets/IMG_5774.jpeg",
-      "assets/IMG_5775.jpeg",
-      "assets/IMG_5776.jpeg",
-      "assets/IMG_5777.jpeg",
-      "assets/IMG_5778.jpeg",
-      "assets/IMG_5796.png",
-      "assets/IMG_5797.jpeg"
-      // add more filenames as uploaded, e.g. "assets/your-file-name.jpg"
-    ];
+  <!-- WhatsApp pill -->
+  <a class="wa-pill" href="https://wa.me/923032609097" target="_blank" aria-label="WhatsApp chat">Chat with us</a>
 
-    // If you have images with long/uuid names, add them here with exact names:
-    // e.g. images.push("assets/39A55220-B1A4-4666-97...jpeg");
+<script>
+  // ====== CONFIG: list your uploaded image filenames here (assets folder) ======
+  // You said you will name/upload them Project-1.jpg, Project-2.jpg ... Project-20.jpg
+  const total = 12; // set how many project images you uploaded (adjust if you uploaded more)
+  const images = [];
+  for(let i=1;i<=total;i++){
+    images.push(`assets/Project-${i}.jpg`);
+  }
+  // If you have PNG or different names, add them manually, e.g.
+  // images.push('assets/Project-13.png');
 
-    // ====== Setup hero slideshow ======
-    const hero = document.querySelector('.hero');
-    const dotsContainer = document.getElementById('dots');
-
-    images.forEach((src, idx) => {
-      const div = document.createElement('div');
-      div.className = 'slide';
-      div.style.backgroundImage = `url("${src}")`;
-      if(idx===0) div.classList.add('show');
-      hero.appendChild(div);
-
-      // dot
-      const b = document.createElement('button');
-      if(idx===0) b.classList.add('active');
-      b.addEventListener('click', ()=> showSlide(idx));
-      dotsContainer.appendChild(b);
+  // ====== HERO SLIDES setup (use first 3 images as hero slides) ======
+  const hero = document.querySelector('.hero');
+  function createHeroSlides(){
+    const slides = [];
+    const use = images.slice(0,3);
+    use.forEach((src, i)=>{
+      const d = document.createElement('div');
+      d.className = 'slide' + (i===0? ' show':'' );
+      d.style.backgroundImage = `url("${src}")`;
+      hero.insertBefore(d, hero.firstChild); // insert under content
+      slides.push(d);
     });
+    return slides;
+  }
+  const heroSlides = createHeroSlides();
+  let hIndex = 0;
+  setInterval(()=> {
+    heroSlides[hIndex].classList.remove('show');
+    hIndex = (hIndex+1)%heroSlides.length;
+    heroSlides[hIndex].classList.add('show');
+  },3800);
 
-    let slides = Array.from(document.querySelectorAll('.hero .slide'));
-    let dots = Array.from(dotsContainer.querySelectorAll('button'));
-    let current = 0;
-    function showSlide(i){
-      slides[current].classList.remove('show');
-      dots[current].classList.remove('active');
-      current = i;
-      slides[current].classList.add('show');
-      dots[current].classList.add('active');
-    }
-    // auto rotate
-    setInterval(()=> {
-      let next = (current+1) % slides.length;
-      showSlide(next);
-    }, 3800);
+  // ====== populate projects grid ======
+  const projectsGrid = document.getElementById('projectsGrid');
+  const labels = [
+    "10 Marla Modern House",
+    "1 Kanal Luxury Villa",
+    "Interior Renovation",
+    "Commercial Design",
+    "Modern Elevation",
+    "Renovation Project",
+    "Luxury Finishes",
+    "Structural Works",
+    "Site & Team",
+    "Carpentry Works",
+    "Electrical & MEP",
+    "Landscape & Exterior"
+  ];
+  for(let i=0;i<images.length;i++){
+    const card = document.createElement('div');
+    card.className = 'project';
+    const img = document.createElement('img');
+    img.src = images[i];
+    img.alt = labels[i] || `Project ${i+1}`;
+    card.appendChild(img);
+    const span = document.createElement('div');
+    span.className = 'label';
+    span.textContent = labels[i] || `Project ${i+1}`;
+    card.appendChild(span);
+    projectsGrid.appendChild(card);
+  }
 
-    // ====== populate projects grid (first 8 images as examples) ======
-    const projectsGrid = document.getElementById('projectsGrid');
-    const labels = [
-      "10 Marla Modern House",
-      "1 Kanal Luxury Villa",
-      "Interior Renovation",
-      "Commercial Design",
-      "Modern Elevation",
-      "Renovation Project",
-      "Luxury Finishes",
-      "Structural Works"
-    ];
-    for(let i=0;i<Math.min(images.length, 8); i++){
-      const card = document.createElement('div');
-      card.className = 'project';
-      const img = document.createElement('img');
-      img.src = images[i];
-      img.alt = labels[i] || `Project ${i+1}`;
-      card.appendChild(img);
-      const span = document.createElement('span');
-      span.className = 'label';
-      span.textContent = labels[i] || `Project ${i+1}`;
-      card.appendChild(span);
-      projectsGrid.appendChild(card);
-    }
+  // ====== Map (Lake City, Lahore) - iframe + open/directions links ======
+  // We use a reliable Google Maps query so clicking "Open" or "Directions" opens Maps app/web with Lake City, Lahore
+  const placeQuery = encodeURIComponent('Lake City Lahore Pakistan');
+  const mapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${placeQuery}`;
+  const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${placeQuery}`;
 
-    // footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  // inject iframe (centered at Lake City approximate coordinates)
+  const mapWrap = document.getElementById('mapWrap');
+  const iframe = document.createElement('iframe');
+  iframe.width = '100%';
+  iframe.height = '220';
+  iframe.style.border = '0';
+  // approximate coordinates for Lake City Lahore -> 31.473°N, 74.258°E (approx)
+  iframe.src = "https://www.google.com/maps?q=31.473,74.258&z=15&output=embed";
+  iframe.loading = 'lazy';
+  mapWrap.appendChild(iframe);
+
+  // set links
+  document.getElementById('openMap').href = mapsSearchUrl;
+  document.getElementById('directions').href = mapsDirectionsUrl;
+
+  // ====== contact form (mailto fallback) ======
+  document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const f = new FormData(this);
+    const name = f.get('name').trim();
+    const phone = f.get('phone').trim();
+    const msg = f.get('message').trim();
+    if(!name || !phone || !msg){ document.getElementById('formMsg').textContent='Please fill all fields.'; return; }
+    const subject = encodeURIComponent('Website Inquiry from ' + name);
+    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\n\nMessage:\n${msg}`);
+    window.location.href = `mailto:shahzad152152@gmail.com?subject=${subject}&body=${body}`;
+    this.reset();
+    document.getElementById('formMsg').textContent='Opening your email client...';
+  });
+
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
