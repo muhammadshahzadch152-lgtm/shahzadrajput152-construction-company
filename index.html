@@ -1,160 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shahzad Rajput152 Construction Company | Luxury Builders</title>
-
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Shahzad Rajput152 Construction Company — Luxury Builder Lahore</title>
+<meta name="description" content="Shahzad Rajput152 Construction — Premium construction, architecture & luxury finishing in Lake City, Lahore.">
 <style>
-/* GLOBAL STYLE */
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: #0a0a0a;
-  color: #f0f0f0;
-}
-h1, h2, h3 { margin: 0; font-weight: 700; }
+  :root{
+    --bg:#070707;
+    --panel:#121212;
+    --gold:#d7ab44;
+    --muted:#cfcfcf;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial;
+    background:var(--bg);color:#fff;line-height:1.45;
+  }
 
-/* HEADER */
-header {
-  background: #000;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #b8923a;
-}
-.logo {
-  color: #d5a746;
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-nav a {
-  color: #fff;
-  margin-left: 25px;
-  text-decoration: none;
-  font-size: 15px;
-}
-nav a:hover { color: #d5a746; }
+  /* header */
+  header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;border-bottom:2px solid rgba(215,171,68,0.12);
+    position:sticky;top:0;background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    z-index:50;
+  }
+  .brand{display:flex;align-items:center;gap:12px}
+  /* inline svg logo circle + SR */
+  .logo-svg{width:56px;height:56px;display:block}
+  .brand-name{color:var(--gold);font-weight:800;font-size:18px;letter-spacing:1px}
+  nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px}
+  nav a:hover{color:var(--gold)}
 
-/* HERO SLIDER */
-.hero {
-  height: 85vh;
-  position: relative;
-  overflow: hidden;
-}
-.slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-.slide.active {
-  opacity: 1;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.hero-content h1 {
-  font-size: 45px;
-  text-transform: uppercase;
-  color: #e6c06d;
-}
-.hero-content p {
-  margin-top: 10px;
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-.btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #e6c06d;
-  color: #000;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 700;
-}
-.btn:hover { filter: brightness(1.13); }
+  /* hero */
+  .hero{
+    min-height:72vh;display:flex;align-items:center;justify-content:center;
+    position:relative;padding:56px 20px;
+    color:#fff;
+    background: center/cover no-repeat url('hero.jpg');
+  }
+  /* dark overlay */
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(2,2,2,0.55), rgba(2,2,2,0.7));}
+  .hero-inner{position:relative;z-index:2;text-align:center;max-width:1000px;padding:10px}
 
-/* SECTIONS */
-section { padding: 60px 20px; max-width: 1200px; margin: auto; }
-.section-title {
-  text-align: center;
-  color: #e6c06d;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
+  .hero-title{font-size:42px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;font-weight:800}
+  .hero-sub{color:var(--muted);font-size:18px;margin-bottom:18px}
+  .cta{background:var(--gold);color:#000;padding:12px 26px;border-radius:8px;font-weight:700;text-decoration:none}
 
-/* SERVICES */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-.service-box {
-  background: #141414;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #2d2d2d;
-  transition: .3s;
-}
-.service-box:hover {
-  border-color: #e6c06d;
-  transform: translateY(-6px);
-}
-.service-box h3 { color: #e6c06d; margin-bottom: 10px; }
+  /* content area */
+  main{max-width:var(--maxw);margin:36px auto 80px;padding:0 20px}
+  .section-title{text-align:center;color:var(--gold);font-size:28px;margin-bottom:18px}
 
-/* PROJECTS */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-.project {
-  height: 210px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  position: relative;
-}
-.project span {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  background: rgba(0,0,0,0.7);
-  padding: 6px 12px;
-  border-radius: 5px;
-  color: #e6c06d;
-  font-weight: 600;
-}
+  /* services */
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:36px}
+  .svc{background:var(--panel);padding:22px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);transition:transform .25s,box-shadow .25s}
+  .svc:hover{transform:translateY(-8px);box-shadow:0 10px 30px rgba(0,0,0,0.6);border-color:rgba(215,171,68,0.18)}
+  .svc h3{color:var(--gold);margin-bottom:8px}
+  .svc p{color:var(--muted);font-size:14px}
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #aaa;
-  background: #000;
-  margin-top: 40px;
-}
+  /* projects */
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .project{height:220px;border-radius:12px;background-size:cover;background-position:center;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+  .project::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.0), rgba(0,0,0,0.55))}
+  .project-label{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.55);padding:6px 10px;border-radius:6px;color:var(--gold);font-weight:700}
+
+  /* about */
+  .about{max-width:900px;margin:36px auto;color:var(--muted);text-align:center;font-size:16px}
+
+  /* contact footer */
+  .contact{display:flex;flex-direction:column;gap:10px;align-items:center;margin-top:36px}
+  .contact a{color:var(--gold);text-decoration:none;font-weight:700}
+
+  footer{padding:22px;text-align:center;color:#999;padding-bottom:60px}
+
+  @media (max-width:780px){
+    .hero-title{font-size:28px}
+    .hero-sub{font-size:15px}
+    header{padding:12px 14px}
+  }
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">SR152 ⸻ LUXURY BUILDERS</div>
+  <div class="brand">
+    <!-- Inline logo SVG so you don't need extra file -->
+    <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stop-color="#e0bf6d"/>
+          <stop offset="1" stop-color="#b8862d"/>
+        </linearGradient>
+      </defs>
+      <circle cx="50" cy="50" r="48" fill="url(#g)"/>
+      <text x="50%" y="58%" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="34" fill="#041014">SR</text>
+    </svg>
+
+    <div>
+      <div class="brand-name">Shahzad Rajput152</div>
+      <div style="font-size:12px;color:#ddd;margin-top:2px">Construction Company</div>
+    </div>
+  </div>
+
   <nav>
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
@@ -163,128 +111,82 @@ footer {
   </nav>
 </header>
 
-<!-- HERO SLIDESHOW -->
-<div class="hero">
-
-  <!-- Replace these 10 links with your images -->
-  <div class="slide active" style="background-image:url('IMAGE1');"></div>
-  <div class="slide" style="background-image:url('IMAGE2');"></div>
-  <div class="slide" style="background-image:url('IMAGE3');"></div>
-  <div class="slide" style="background-image:url('IMAGE4');"></div>
-  <div class="slide" style="background-image:url('IMAGE5');"></div>
-  <div class="slide" style="background-image:url('IMAGE6');"></div>
-  <div class="slide" style="background-image:url('IMAGE7');"></div>
-  <div class="slide" style="background-image:url('IMAGE8');"></div>
-  <div class="slide" style="background-image:url('IMAGE9');"></div>
-  <div class="slide" style="background-image:url('IMAGE10');"></div>
-
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1>Shahzad Rajput152 Construction Company</h1>
-    <p>Premium Construction • Architecture • Luxury Finishing — Lake City Lahore</p>
-    <a class="btn" href="#contact">Get Free Consultation</a>
-  </div>
-</div>
-
-<script>
-let slides = document.querySelectorAll(".slide");
-let index = 0;
-
-setInterval(() => {
-  slides[index].classList.remove("active");
-  index = (index + 1) % slides.length;
-  slides[index].classList.add("active");
-}, 4000);
-</script>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2 class="section-title">Our Luxury Services</h2>
-
-  <div class="services-grid">
-    <div class="service-box">
-      <h3>Grey Structure Construction</h3>
-      <p>Premium quality materials with professional engineering.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Turnkey Construction</h3>
-      <p>Complete finishing with luxury interiors.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Architectural Design</h3>
-      <p>Modern, classical, premium elevations & planning.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Interior Designing</h3>
-      <p>Luxury kitchens, wardrobes, ceilings & lighting designs.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>3D Elevation & Plans</h3>
-      <p>High-end realistic visuals & structural drawings.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Renovation & Remodeling</h3>
-      <p>Transforming outdated homes into luxury spaces.</p>
+<!-- HERO (uses your single uploaded image named hero.jpg) -->
+<section class="hero" role="banner" aria-label="Hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-title">Shahzad Rajput152 Construction Company</div>
+      <div class="hero-sub">Premium Construction • Architecture • Luxury Finishing — Lake City, Lahore</div>
+      <a class="cta" href="#contact">Get Free Consultation</a>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2 class="section-title">Recent Projects</h2>
-
-  <div class="projects-grid">
-
-    <div class="project" style="background-image:url('IMAGE1');">
-      <span>Residential Villa</span>
+<main>
+  <section id="services" aria-labelledby="svc">
+    <h2 id="svc" class="section-title">Our Luxury Services</h2>
+    <div class="services">
+      <div class="svc"><h3>Grey Structure</h3><p>Strong foundations and high standard materials.</p></div>
+      <div class="svc"><h3>Turnkey Projects</h3><p>Complete finishing — interiors, fixtures & handover.</p></div>
+      <div class="svc"><h3>Architectural Design</h3><p>Modern & classical elevations with smart layouts.</p></div>
+      <div class="svc"><h3>Interior Design</h3><p>Luxury kitchens, wardrobes, ceilings & lighting.</p></div>
+      <div class="svc"><h3>3D Elevation & Plans</h3><p>Realistic 3D visuals and structural drawings.</p></div>
+      <div class="svc"><h3>Renovation</h3><p>Transforming houses into premium modern homes.</p></div>
     </div>
+  </section>
 
-    <div class="project" style="background-image:url('IMAGE3');">
-      <span>Modern House</span>
+  <section id="projects" aria-labelledby="proj">
+    <h2 id="proj" class="section-title">Recent Projects</h2>
+    <div class="projects-grid">
+      <!-- Use the same hero image in gallery for now (single image site) -->
+      <div class="project" style="background-image:url('hero.jpg')">
+        <div class="project-label">Premium Villa</div>
+      </div>
+      <div class="project" style="background-image:url('hero.jpg')">
+        <div class="project-label">Luxury Interior</div>
+      </div>
+      <div class="project" style="background-image:url('hero.jpg')">
+        <div class="project-label">Modern Design</div>
+      </div>
+      <div class="project" style="background-image:url('hero.jpg')">
+        <div class="project-label">Commercial Fitout</div>
+      </div>
     </div>
+  </section>
 
-    <div class="project" style="background-image:url('IMAGE6');">
-      <span>Interior Design</span>
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="about">
+      Shahzad Rajput152 Construction Company is a premium construction & architectural firm based in Lake City, Lahore.
+      We deliver turnkey luxury homes, grey structure packages and high-end interior solutions with honesty and craftsmanship.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact">
+      <div><strong>WhatsApp:</strong> <a href="tel:+923032609097">+92 303 2609097</a></div>
+      <div><strong>Email:</strong> <a href="mailto:shahzad152152@gmail.com">shahzad152152@gmail.com</a></div>
+      <div><strong>Address:</strong> Lake City, Lahore</div>
     </div>
-
-    <div class="project" style="background-image:url('IMAGE10');">
-      <span>Commercial Structure</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <h2 class="section-title">About Us</h2>
-  <p style="max-width:850px;margin:auto;font-size:17px;text-align:center;color:#ccc;">
-    Shahzad Rajput152 Construction Company is a premium luxury construction and 
-    architectural firm based in Lake City Lahore. Specializing in grey structure,
-    turnkey luxury projects, modern architecture & interior designing—offering 
-    honesty, innovation & premium craftsmanship.
-  </p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2 class="section-title">Contact Us</h2>
-
-  <div class="contact-box">
-    <p><strong>WhatsApp:</strong> +92 303 2609097</p>
-    <p><strong>Email:</strong> shahzad152152@gmail.com</p>
-    <p><strong>Address:</strong> Lake City, Lahore, Pakistan</p>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer>
-  © 2025 SR152 Construction Company — Premium Builders Lahore
+  © <span id="y"></span> Shahzad Rajput152 Construction — Premium Builders Lahore
 </footer>
 
+<script>
+  // current year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  /*
+   How to make this work on GitHub Pages:
+   1) Upload your single premium image to your repo (same folder as this index.html).
+      Name it exactly: hero.jpg
+      OR replace 'hero.jpg' above with your image's raw GitHub URL.
+   2) Commit & publish on GitHub Pages — site will show the premium hero + profile layout.
+  */
+</script>
 </body>
 </html>
