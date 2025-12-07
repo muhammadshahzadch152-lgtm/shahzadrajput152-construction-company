@@ -70,12 +70,6 @@ section{padding:46px 18px}
 
 /* footer */
 footer{padding:20px;text-align:center;color:#aaa;background:linear-gradient(180deg,#050505,#020202);margin-top:30px}
-
-/* responsive */
-@media(max-width:980px){
-  .contact-wrap{grid-template-columns:1fr}
-  .hero h2{font-size:28px}
-}
 </style>
 </head>
 <body>
@@ -131,9 +125,7 @@ footer{padding:20px;text-align:center;color:#aaa;background:linear-gradient(180d
 <section id="projects">
   <div class="container">
     <h3 class="section-title">Recent Projects</h3>
-    <div class="projects-grid" id="projectsGrid">
-      <!-- JS will populate available images -->
-    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
   </div>
 </section>
 
@@ -151,9 +143,8 @@ footer{padding:20px;text-align:center;color:#aaa;background:linear-gradient(180d
 <section id="contact">
   <div class="container contact-wrap">
     <div class="map-card">
-      <h4 style="color:var(--gold);margin-top:0">Visit Us — Lake City (Gate 1)</h4>
-      <!-- embed for Lake City Gate 1 -->
-      <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13610.768563962068!2d74.1779842!3d31.3548763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903c11343ed0d%3A0xaea0f67f02df7c3f!2sLake%20City%20Main%20Entrance%20(Gate%201)!5e0!3m2!1sen!2s!4v1700000000000" loading="lazy"></iframe>
+      <h4 style="color:var(--gold);margin-top:0">Visit Us – Lake City Lahore</h4>
+      <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13610.768563962068!2d74.1779842!3d31.3548763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903c11343ed0d%3A0xaea0f67f02df7c3f!2sLake%20City%20Main%20Entrance%20(Gate%201)!5e0!3m2!1sen!2s!4v1700000000000"></iframe>
 
       <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
         <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Lake+City+Lahore" target="_blank">Get Directions</a>
@@ -164,7 +155,7 @@ footer{padding:20px;text-align:center;color:#aaa;background:linear-gradient(180d
     <div class="contact-card">
       <h4 style="color:var(--gold);margin-top:0">Contact & Visit</h4>
       <p><strong>Address:</strong> Lake City, Lahore, Pakistan</p>
-      <p><strong>Phone:</strong> <a href="tel:+923032609097">+92 303 260909097</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+923032609097">+92 303 2609097</a></p>
       <p><strong>Email:</strong> <a href="mailto:Shahzad152152@gmail.com">Shahzad152152@gmail.com</a></p>
 
       <div style="margin-top:12px">
@@ -185,94 +176,42 @@ footer{padding:20px;text-align:center;color:#aaa;background:linear-gradient(180d
 <a class="wa-float" href="https://wa.me/923032609097" target="_blank" aria-label="Chat on WhatsApp">WhatsApp</a>
 
 <script>
-/*
-  Dynamic image loader:
-  - we provide a large list of possible filenames (based on your uploads and screenshots)
-  - script will try to load them; missing images won't show (onerror hides them)
-  - this ensures whichever filenames you actually uploaded will appear automatically
-*/
-const possibleImages = [
-  // common IMG_ names
-  "assets/IMG_5768.jpeg","assets/IMG_5770.jpeg","assets/IMG_5771.jpeg","assets/IMG_5772.jpeg",
-  "assets/IMG_5773.jpeg","assets/IMG_5774.jpeg","assets/IMG_5775.jpeg","assets/IMG_5776.jpeg",
-  "assets/IMG_5777.jpeg","assets/IMG_5778.jpeg","assets/IMG_5796.png","assets/IMG_5797.jpeg",
+document.getElementById("yr").textContent = new Date().getFullYear();
 
-  // other names seen in screenshots / uploads
-  "assets/10193e7e.jpeg","assets/4dc4c20c.jpeg","assets/cbe7a35e.jpeg","assets/39A55220-B1A4-4666-97B8-XXXXX.jpeg",
-  "assets/735BC6C1-1A94-4206-A9AE-3AFCDC78B126.jpeg","assets/7D667965-F943-45BE-A9AC-2BC6FBC8B761.jpeg",
-  "assets/FCF036E3-4A7C-4CD8-BEB8-CE9C3B92917D.jpeg","assets/F72524C6-3B07-4853-A426-A4CAC0F508FA.jpeg",
-  "assets/8076E779-8DED-46D0-BCAB-CBB02443C527.jpeg","assets/6350E04A-B3F8-4697-AFF7-85BF7834D27E.jpeg",
-  "assets/40AF4C04-C8F7-47D7-B0B0-2417C6DE68B8.jpeg","assets/218E05C0-CEBC-44AE-A9EF-5FB87FB532A4.jpeg",
-  "assets/E38B5C02-B2C9-42F6-B3D9-8F05F6C01634.jpeg","assets/52732206-F916-4432-9FC5-5F60C2CB6AEE.jpeg",
-  "assets/021E9FE1-A19E-4AEA-A67C-FE385198CCF8.png","assets/68E952B7-ADDA-4452-9E94-D477FE838403.png",
-  "assets/4B5FE61F-6945-4516-9382-D2F4951638E0.jpeg","assets/8BFA8DF0-DD89-4F8A-942D-7FF1BDC861C5.jpeg",
-  "assets/358441C6-5619-448F-8FEE-87E00A0C7D01.jpeg","assets/CBD9B2D8-BABF-4E7E-B2A5-45EC71098E40.jpeg",
-  "assets/52C6B2AE-F708-4CF7-A75B-96A4DF1E089A.jpeg","assets/EED63E8F-E8CA-4635-9E69-03C4FBA31CBE.jpeg",
-  "assets/44A8800F-2055-4BA2-95B1-478DD3ED1CEF.jpeg","assets/BFFC6209-B954-4831-A5F9-B3DAF3A129A2.jpeg",
-  "assets/5993B6AA-B404-4F59-8303-5A252CFA593F.jpeg","assets/B5924264-5506-45BF-8168-A2BC282B2FB3.jpeg",
-  "assets/3B8E32BB-9302-48E2-A17F-2A2E3B31C44A.jpeg","assets/C9A9376C-36F2-43A6-96AB-56E3848D91A8.jpeg",
-  "assets/5E14A029-C3F1-477C-BCBC-67AB03B03033.jpeg","assets/7DF6C527-F34B-45B0-9A73-9BCADF2273E0.jpeg",
-  "assets/9560DE96-6A90-4302-9DF1-0199C77BB7A5.jpeg","assets/FA6B5CC2-0302-413A-84EC-3C6FE340C04B.jpeg",
-  "assets/D63A0EF6-CFA9-44CB-9EB6-41DF6EA2F3A3.png","assets/BE41556E-7EF2-4B2F-A350-5321D1691DD6.jpeg",
-  "assets/76841949-73E4-41B6-AAAD-D27B4337B4CD.jpeg","assets/428BFE60-87D5-4782-A297-3300645B14E3.jpeg",
-  "assets/D7B5A1E4-56FC-485E-8AA3-3E54D5EEA3B4.jpeg","assets/4ACC96ED-B52D-4DFE-B305-CCB0FEC43C99.jpeg",
-  "assets/B9DE4E07-7D77-432D-9569-01D150D14D04.jpeg"
+const images = [
+  "assets/10193e7e-1589-4da7-8408-502914aef90e.jpeg",
+  "assets/39A55220-B1A4-4666-97E5-83A50C7AE873.png",
+  "assets/4dc4c20c-8ef8-49cd-bf39-fc564cb3f818.jpeg",
+  "assets/cbe7a35e-f97b-41a6-a5e6-dd14e12daa8d.jpeg"
 ];
 
-// create hero slides (use first 3 available)
-const slidesContainer = document.getElementById('slidesContainer');
-let heroSlides = [];
-let slideCount = 0;
-for(let i=0;i<possibleImages.length && slideCount<4;i++){
-  const img = new Image();
-  img.src = possibleImages[i];
-  img.onload = function(){
-    const div = document.createElement('div');
-    div.className = 'slide' + (heroSlides.length===0 ? ' show' : '');
-    div.style.backgroundImage = `url('${possibleImages[i]}')`;
-    slidesContainer.appendChild(div);
-    heroSlides.push(div);
-  };
-  img.onerror = function(){ /* ignore missing */ };
-  slideCount++;
-}
-
-// auto rotate when slides present
-setTimeout(()=>{
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  if(slides.length>1){
-    let idx=0;
-    setInterval(()=>{
-      slides[idx].classList.remove('show');
-      idx = (idx+1)%slides.length;
-      slides[idx].classList.add('show');
-    },3800);
-  }
-},700);
-
-// populate projects gallery with available images
-const projectsGrid = document.getElementById('projectsGrid');
-possibleImages.forEach((src, idx)=>{
-  const img = new Image();
-  img.src = src;
-  img.onload = function(){
-    const card = document.createElement('div');
-    card.className = 'project';
-    const im = document.createElement('img');
-    im.src = src;
-    im.alt = 'Project ' + (idx+1);
-    card.appendChild(im);
-    const lbl = document.createElement('div');
-    lbl.className = 'label';
-    lbl.textContent = ['10 Marla Modern','1 Kanal Villa','Interior Renovation','Commercial Design','Renovation','Luxury Finishes','Site Works','Carpentry'][idx % 8];
-    card.appendChild(lbl);
-    projectsGrid.appendChild(card);
-  };
-  img.onerror = function(){ /* do nothing for missing */ };
+// HERO SLIDES
+const slidesContainer = document.getElementById("slidesContainer");
+images.forEach((src, i) => {
+  const div = document.createElement("div");
+  div.className = "slide" + (i === 0 ? " show" : "");
+  div.style.backgroundImage = `url('${src}')`;
+  slidesContainer.appendChild(div);
 });
 
-// set footer year
-document.getElementById('yr').textContent = new Date().getFullYear();
+setInterval(() => {
+  const slides = document.querySelectorAll(".slide");
+  let active = [...slides].findIndex(s => s.classList.contains("show"));
+  slides[active].classList.remove("show");
+  slides[(active + 1) % slides.length].classList.add("show");
+}, 3500);
+
+// PROJECTS
+const projectsGrid = document.getElementById("projectsGrid");
+images.forEach((src, index) => {
+  const card = document.createElement("div");
+  card.className = "project";
+  card.innerHTML = `
+    <img src="${src}">
+    <div class="label">Project ${index + 1}</div>
+  `;
+  projectsGrid.appendChild(card);
+});
 </script>
 
 </body>
