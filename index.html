@@ -3,132 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shahzad Rajput152 Construction Company</title>
+<title>Shahzad Rajput 152 Construction Company</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-}
+    body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background: #000;
+        color: #fff;
+    }
 
-/* HERO SECTION */
-.hero {
-    height: 95vh;
-    background-image: url("assets/IMG_5770.jpeg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
+    /* HERO SECTION */
+    .hero {
+        height: 95vh;
+        background: url('assets/IMG_5773.jpeg') no-repeat center/cover;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
-.hero h1 {
-    font-size: 36px;
-    color: gold;
-    font-weight: bold;
-}
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.6);
+    }
 
-.hero p {
-    color: #e0e0e0;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        padding: 20px;
+    }
 
-.btn {
-    background: gold;
-    padding: 12px 25px;
-    border-radius: 8px;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .hero h1 {
+        font-size: 45px;
+        font-weight: bold;
+        color: gold;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
 
-/* SECTION TITLE */
-.section-title {
-    text-align: center;
-    font-size: 30px;
-    color: gold;
-    margin-top: 50px;
-}
+    .hero p {
+        font-size: 18px;
+        color: #ddd;
+        margin-bottom: 25px;
+    }
 
-/* SERVICES */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 30px;
-}
+    .hero button {
+        background: gold;
+        border: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+    }
 
-.service-box {
-    background: #111;
-    padding: 20px;
-    border: 1px solid #333;
-    border-radius: 10px;
-}
+    /* SECTION TITLE */
+    .section-title {
+        text-align: center;
+        color: gold;
+        font-size: 32px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
 
-/* PROJECTS */
-.projects {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 20px;
-}
+    /* SERVICES GRID */
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        padding: 20px 40px;
+    }
 
-.project-card {
-    min-width: 250px;
-    background: #111;
-    border-radius: 10px;
-    overflow: hidden;
-}
+    .service-box {
+        background: #111;
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid #333;
+        box-shadow: 0px 0px 8px rgba(255,215,0,0.15);
+    }
 
-.project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
+    .service-box h3 {
+        color: gold;
+        margin-bottom: 10px;
+    }
 
-/* ABOUT SECTION */
-.about {
-    padding: 40px;
-    text-align: center;
-    background: #111;
-}
+    .service-box p {
+        color: #ccc;
+        line-height: 1.6;
+    }
 
-/* TEAM / WORK IMAGES */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 30px;
-}
+    /* PROJECTS */
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+        gap: 25px;
+        padding: 20px 40px;
+    }
 
-.gallery img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-}
+    .project-card {
+        text-align: center;
+    }
+
+    .project-card img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 8px;
+        border: 1px solid #333;
+    }
+
+    .project-card h4 {
+        color: gold;
+        margin-top: 5px;
+    }
+
+    /* ABOUT */
+    .about {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        color: #ddd;
+        line-height: 1.8;
+    }
+
+    /* FOOTER */
+    footer {
+        margin-top: 40px;
+        background: #111;
+        padding: 25px;
+        text-align: center;
+        color: #777;
+        border-top: 1px solid #222;
+    }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
-    <h1>SHAHZAD RAJPUT152 CONSTRUCTION COMPANY</h1>
-    <p>Premium Construction – Architecture – Luxury Finishing – Lake City Lahore</p>
-    <a class="btn" href="#">Get Free Consultation</a>
+    <div class="hero-content">
+        <h1>SHAHZAD RAJPUT152<br>CONSTRUCTION COMPANY</h1>
+        <p>Premium Construction – Architecture – Luxury Finishing – Lake City Lahore</p>
+        <button>Get Free Consultation</button>
+    </div>
 </div>
 
-<!-- SERVICES -->
 <h2 class="section-title">Our Luxury Services</h2>
 
 <div class="services">
+
     <div class="service-box">
         <h3>Grey Structure Construction</h3>
         <p>Premium quality materials with professional engineering.</p>
@@ -136,70 +164,68 @@ body {
 
     <div class="service-box">
         <h3>Turnkey Construction</h3>
-        <p>Complete finishing with luxury interiors & fittings.</p>
+        <p>Complete finishing with luxury interiors and fittings.</p>
     </div>
 
     <div class="service-box">
         <h3>Architectural Design</h3>
-        <p>Modern, classical & premium house designs.</p>
+        <p>Modern, classical & premium architectural house elevations.</p>
     </div>
 
     <div class="service-box">
         <h3>Interior Designing</h3>
-        <p>Luxury kitchen, wardrobes, ceilings & lighting layouts.</p>
+        <p>Luxury kitchens, wardrobes, ceiling & lighting layouts.</p>
     </div>
 
     <div class="service-box">
-        <h3>3D Elevations & Plans</h3>
-        <p>Top quality realistic visuals & structural drawings.</p>
+        <h3>3D Elevation & Plans</h3>
+        <p>High–quality realistic visuals and structural drawings.</p>
     </div>
 
     <div class="service-box">
         <h3>Renovation & Remodeling</h3>
-        <p>Transforming old homes into luxury modern spaces.</p>
+        <p>Transforming old homes into modern luxury spaces.</p>
     </div>
+
 </div>
 
-<!-- PROJECTS -->
 <h2 class="section-title">Recent Projects</h2>
 
 <div class="projects">
-    <div class="project-card">
-        <img src="assets/IMG_5771.jpeg">
-    </div>
-    <div class="project-card">
-        <img src="assets/IMG_5772.jpeg">
-    </div>
-    <div class="project-card">
-        <img src="assets/IMG_5773.jpeg">
-    </div>
+
     <div class="project-card">
         <img src="assets/IMG_5774.jpeg">
+        <h4>31 / Ten 101</h4>
     </div>
+
+    <div class="project-card">
+        <img src="assets/IMG_5775.jpeg">
+        <h4>Elevation Plans</h4>
+    </div>
+
+    <div class="project-card">
+        <img src="assets/IMG_5776.jpeg">
+        <h4>Interior Renovation</h4>
+    </div>
+
+    <div class="project-card">
+        <img src="assets/IMG_5778.jpeg">
+        <h4>Commercial Design</h4>
+    </div>
+
 </div>
 
-<!-- ABOUT -->
 <h2 class="section-title">About Us</h2>
 
 <div class="about">
-    <p>
-        Shahzad Rajput 152 Construction Company specializes in high-end residential,
-        commercial & turnkey projects across Lahore. We deliver luxury finishing,
-        modern architecture & premium quality construction.
-    </p>
+    Shahzad Rajput 152 Construction Company is a premium construction and architectural 
+    firm based in Lake City Lahore. We specialize in luxury houses, turnkey projects and 
+    modern architecture with high–quality engineering.
 </div>
 
-<!-- WORKING / TEAM GALLERY -->
-<h2 class="section-title">Our Team & Work</h2>
-
-<div class="gallery">
-    <img src="assets/IMG_5775.jpeg">
-    <img src="assets/IMG_5776.jpeg">
-    <img src="assets/IMG_5777.jpeg">
-    <img src="assets/IMG_5778.jpeg">
-    <img src="assets/IMG_5768.jpeg">
-    <img src="assets/IMG_5770.jpeg">
-</div>
+<footer>
+    © 2025 Shahzad Rajput 152 Construction Company — All Rights Reserved.
+</footer>
 
 </body>
 </html>
