@@ -1,139 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shahzad Rajput152 Construction Company | Luxury Builder Lahore</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahzad Rajput152 Construction Company | Luxury Builders</title>
 
 <style>
-/* -------- GLOBAL STYLE -------- */
+/* GLOBAL STYLE */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: #0e0e0e;
-  color: #f2f2f2;
+  background: #0a0a0a;
+  color: #f0f0f0;
 }
-h1, h2, h3 { font-weight: 600; margin: 0; }
-section { padding: 50px 20px; max-width: 1200px; margin: auto; }
+h1, h2, h3 { margin: 0; font-weight: 700; }
 
-/* -------- HEADER -------- */
+/* HEADER */
 header {
   background: #000;
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #b29149;
+  border-bottom: 2px solid #b8923a;
 }
-.logo img {
-  height: 55px;
-  width: auto;
+.logo {
+  color: #d5a746;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
+nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 15px;
+}
+nav a:hover { color: #d5a746; }
 
-/* -------- HERO -------- */
+/* HERO SLIDER */
 .hero {
-  background: url('735BC6C1-1A94-4206-A9AE-3AFCDC78B126.jpeg') no-repeat center/cover;
-  padding: 160px 20px;
-  text-align: center;
+  height: 85vh;
   position: relative;
+  overflow: hidden;
 }
-.hero::after {
-  content:"";
+.slide {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.65);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
 }
-.hero-content { position: relative; z-index: 2; }
-.hero-logo {
-  width: 200px;
-  margin-bottom: 20px;
+.slide.active {
+  opacity: 1;
 }
-.hero h1 {
-  font-size: 40px;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 45px;
   text-transform: uppercase;
-  color: #fff;
+  color: #e6c06d;
 }
-.hero p { font-size: 18px; color: #ddd; margin-top: 10px; }
-
-/* BUTTON */
+.hero-content p {
+  margin-top: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
 .btn {
   margin-top: 20px;
-  display: inline-block;
   padding: 12px 25px;
-  background: #b29149;
+  background: #e6c06d;
   color: #000;
-  font-weight: bold;
   border-radius: 6px;
   text-decoration: none;
+  font-weight: 700;
 }
-.btn:hover { filter: brightness(1.2); }
+.btn:hover { filter: brightness(1.13); }
+
+/* SECTIONS */
+section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+.section-title {
+  text-align: center;
+  color: #e6c06d;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
 
 /* SERVICES */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 .service-box {
-  background: #1a1a1a;
-  padding: 25px;
+  background: #141414;
+  padding: 30px;
   border-radius: 10px;
-  border: 1px solid #333;
-  transition: 0.3s;
+  border: 1px solid #2d2d2d;
+  transition: .3s;
 }
 .service-box:hover {
-  border-color: #b29149;
-  transform: translateY(-5px);
+  border-color: #e6c06d;
+  transform: translateY(-6px);
 }
-.service-box h3 { color: #b29149; }
+.service-box h3 { color: #e6c06d; margin-bottom: 10px; }
 
-/* PROJECTS + GALLERY */
+/* PROJECTS */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
+  gap: 20px;
 }
 .project {
-  height: 200px;
-  border-radius: 10px;
+  height: 210px;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 0 10px #000;
+  border-radius: 12px;
+  position: relative;
 }
-
-/* -------- CONTACT -------- */
-.contact-box {
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #333;
-}
-.contact-box input,
-.contact-box textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 6px;
-  border: 1px solid #444;
-  background: #111;
-  color: #fff;
-}
-.contact-box button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 12px;
-  border: none;
-  background: #b29149;
-  color: #000;
-  font-weight: bold;
-  border-radius: 6px;
+.project span {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0,0,0,0.7);
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: #e6c06d;
+  font-weight: 600;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 25px;
-  color: #999;
+  color: #aaa;
   background: #000;
   margin-top: 40px;
 }
@@ -142,91 +153,137 @@ footer {
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="logo">
-    <img src="A_website_homepage_screenshot_for_Shahzad_Rajput15.png" alt="SR152 Logo">
-  </div>
+  <div class="logo">SR152 ⸻ LUXURY BUILDERS</div>
   <nav>
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<!-- HERO SLIDESHOW -->
+<div class="hero">
+
+  <!-- Replace these 10 links with your images -->
+  <div class="slide active" style="background-image:url('IMAGE1');"></div>
+  <div class="slide" style="background-image:url('IMAGE2');"></div>
+  <div class="slide" style="background-image:url('IMAGE3');"></div>
+  <div class="slide" style="background-image:url('IMAGE4');"></div>
+  <div class="slide" style="background-image:url('IMAGE5');"></div>
+  <div class="slide" style="background-image:url('IMAGE6');"></div>
+  <div class="slide" style="background-image:url('IMAGE7');"></div>
+  <div class="slide" style="background-image:url('IMAGE8');"></div>
+  <div class="slide" style="background-image:url('IMAGE9');"></div>
+  <div class="slide" style="background-image:url('IMAGE10');"></div>
+
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
-    <img src="A_website_homepage_screenshot_for_Shahzad_Rajput15.png" class="hero-logo">
-    <h1>Shahzad Rajput 152 Construction</h1>
+    <h1>Shahzad Rajput152 Construction Company</h1>
     <p>Premium Construction • Architecture • Luxury Finishing — Lake City Lahore</p>
     <a class="btn" href="#contact">Get Free Consultation</a>
   </div>
-</section>
+</div>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 4000);
+</script>
 
 <!-- SERVICES -->
 <section id="services">
-  <h2 style="color:#b29149; text-align:center;">Our Luxury Services</h2>
+  <h2 class="section-title">Our Luxury Services</h2>
+
   <div class="services-grid">
+    <div class="service-box">
+      <h3>Grey Structure Construction</h3>
+      <p>Premium quality materials with professional engineering.</p>
+    </div>
 
-    <div class="service-box"><h3>Grey Structure Construction</h3><p>Premium quality materials with professional engineering.</p></div>
-    <div class="service-box"><h3>Turnkey Construction</h3><p>Luxury finishing, premium interiors & fittings.</p></div>
-    <div class="service-box"><h3>Architectural Design</h3><p>Modern, classic and high-end architectural concepts.</p></div>
-    <div class="service-box"><h3>Interior Designing</h3><p>Luxury kitchens, wardrobes, ceilings & smart lighting.</p></div>
-    <div class="service-box"><h3>3D Designs</h3><p>High-quality realistic 3D visuals for your dream home.</p></div>
-    <div class="service-box"><h3>Renovation Services</h3><p>Transforming old homes into modern luxury spaces.</p></div>
+    <div class="service-box">
+      <h3>Turnkey Construction</h3>
+      <p>Complete finishing with luxury interiors.</p>
+    </div>
 
+    <div class="service-box">
+      <h3>Architectural Design</h3>
+      <p>Modern, classical, premium elevations & planning.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Interior Designing</h3>
+      <p>Luxury kitchens, wardrobes, ceilings & lighting designs.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>3D Elevation & Plans</h3>
+      <p>High-end realistic visuals & structural drawings.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Renovation & Remodeling</h3>
+      <p>Transforming outdated homes into luxury spaces.</p>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <h2 style="color:#b29149; text-align:center;">Recent Projects</h2>
+  <h2 class="section-title">Recent Projects</h2>
+
   <div class="projects-grid">
-    <div class="project" style="background-image:url('7D667965-F943-45BE-A2CC-2BC6FBC8B761.jpeg');"></div>
-    <div class="project" style="background-image:url('FCF036E3-4A7C-4CD8-BEB8-CE9C3B92917D.jpeg');"></div>
-    <div class="project" style="background-image:url('F72524C6-3B07-4853-A426-A4CAC0F508FA.jpeg');"></div>
-    <div class="project" style="background-image:url('8076E779-8DED-46D0-BCAB-CBB02443C527.jpeg');"></div>
+
+    <div class="project" style="background-image:url('IMAGE1');">
+      <span>Residential Villa</span>
+    </div>
+
+    <div class="project" style="background-image:url('IMAGE3');">
+      <span>Modern House</span>
+    </div>
+
+    <div class="project" style="background-image:url('IMAGE6');">
+      <span>Interior Design</span>
+    </div>
+
+    <div class="project" style="background-image:url('IMAGE10');">
+      <span>Commercial Structure</span>
+    </div>
+
   </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery">
-  <h2 style="color:#b29149; text-align:center;">Our Work Gallery</h2>
-  <div class="projects-grid">
-    <div class="project" style="background-image:url('735BC6C1-1A94-4206-A9AE-3AFCDC78B126.jpeg');"></div>
-    <div class="project" style="background-image:url('7D667965-F943-45BE-A2CC-2BC6FBC8B761.jpeg');"></div>
-    <div class="project" style="background-image:url('FCF036E3-4A7C-4CD8-BEB8-CE9C3B92917D.jpeg');"></div>
-    <div class="project" style="background-image:url('F72524C6-3B07-4853-A426-A4CAC0F508FA.jpeg');"></div>
-    <div class="project" style="background-image:url('8076E779-8DED-46D0-BCAB-CBB02443C527.jpeg');"></div>
-    <div class="project" style="background-image:url('6350E04A-B3F8-4697-AFF7-85BF7834D27E.jpeg');"></div>
-    <div class="project" style="background-image:url('40AF4C04-C8F7-47D7-B0B0-2417C6DE68B8.jpeg');"></div>
-    <div class="project" style="background-image:url('218E05C0-CEBC-44AE-A9EF-5FB87FB532A4.jpeg');"></div>
-    <div class="project" style="background-image:url('E38B5C02-B2C9-42F6-B3D9-8F05F6C01634.jpeg');"></div>
-    <div class="project" style="background-image:url('52732206-F916-4432-9FC5-5F60C2CB6AEE.jpeg');"></div>
-  </div>
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <p style="max-width:850px;margin:auto;font-size:17px;text-align:center;color:#ccc;">
+    Shahzad Rajput152 Construction Company is a premium luxury construction and 
+    architectural firm based in Lake City Lahore. Specializing in grey structure,
+    turnkey luxury projects, modern architecture & interior designing—offering 
+    honesty, innovation & premium craftsmanship.
+  </p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2 style="color:#b29149; text-align:center;">Contact Us</h2>
+  <h2 class="section-title">Contact Us</h2>
+
   <div class="contact-box">
     <p><strong>WhatsApp:</strong> +92 303 2609097</p>
     <p><strong>Email:</strong> shahzad152152@gmail.com</p>
-    <p><strong>Address:</strong> Lake City, Lahore</p>
-
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="text" placeholder="Phone / WhatsApp" required />
-      <textarea placeholder="Your message..." required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <p><strong>Address:</strong> Lake City, Lahore, Pakistan</p>
   </div>
 </section>
 
 <footer>
-© 2025 Shahzad Rajput152 Construction Company — Premium Builders Lahore
+  © 2025 SR152 Construction Company — Premium Builders Lahore
 </footer>
 
 </body>
