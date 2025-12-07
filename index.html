@@ -1,273 +1,231 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Shahzad Rajput152 Construction Company — Premium Builders Lahore</title>
-<meta name="description" content="Shahzad Rajput152 Construction Company — Premium construction, turnkey finishing & architecture — Lake City Lahore.">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shahzad Rajput152 Construction Company</title>
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --gold:#b29149;
-    --gold-2:#b07f2a;
-    --bg:#0b0b0b;
-    --card:#0f0f0f;
-    --muted:#cfcfcf;
-    --maxw:1200px;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:"Poppins",sans-serif;background:var(--bg);color:#fff;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
+:root{
+  --bg:#0c0c0c;
+  --card:#111;
+  --gold:#d3a52a;
+  --muted:#cfcfcf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Poppins",sans-serif;
+  background:var(--bg);color:var(--muted);line-height:1.6;
+}
 
-  /* header */
-  header{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(0,0,0,0.4);backdrop-filter: blur(4px);border-bottom:2px solid rgba(178,145,73,0.06)}
-  .brand{display:flex;align-items:center;gap:12px}
-  .brand .logo-mark{width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--gold-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#070707}
-  .brand .title{font-weight:800;color:var(--gold);letter-spacing:1px}
-  nav{display:flex;gap:16px}
-  nav a{color:#eee;padding:8px 10px;border-radius:8px;font-weight:600}
-  nav a:hover{color:var(--gold)}
+/* HEADER */
+.header{padding:14px 0;background:#050505;position:sticky;top:0;z-index:20}
+.container{width:92%;max-width:1100px;margin:auto}
+.header-inner{display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:12px}
+.logo-box{width:55px;height:55px;background:linear-gradient(180deg,var(--gold),#b9891a);color:#000;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display";font-size:22px;font-weight:800}
+.brand h1{font-size:18px;color:var(--gold);margin:0}
+.brand p{font-size:12px;margin:0;color:#eee}
 
-  /* hero */
-  .hero{position:relative;height:76vh;min-height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-  .hero .slide{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity .9s ease;opacity:0;filter:contrast(.95)}
-  .hero .slide.show{opacity:1}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.6));z-index:2}
-  .hero .inner{position:relative;z-index:4;text-align:center;padding:0 24px}
-  .hero h1{font-size:40px;color:var(--gold);margin:0;text-transform:uppercase;letter-spacing:1px}
-  .hero p{color:#eee;margin-top:12px;max-width:920px}
-  .hero .ctas{margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .btn{padding:12px 22px;border-radius:10px;font-weight:800;cursor:pointer}
-  .btn-primary{background:linear-gradient(90deg,var(--gold),var(--gold-2));color:#000;box-shadow:0 16px 40px rgba(178,145,73,0.12)}
-  .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff}
+.nav{display:flex;gap:12px;align-items:center}
+.nav a{color:#ddd;text-decoration:none;font-size:14px}
+.btn-gold{background:linear-gradient(180deg,var(--gold),#b9891a);padding:8px 14px;border-radius:6px;color:#222;text-decoration:none;font-weight:600}
 
-  /* main panel */
-  main{margin-top:-80px;padding-top:80px}
-  .panel{max-width:var(--maxw);margin:0 auto;padding:36px 20px;border-top-left-radius:20px;border-top-right-radius:20px;background:linear-gradient(180deg,#0b0b0b,#060606)}
-  .ribbon{display:flex;gap:12px;align-items:center;justify-content:center;margin-bottom:20px}
-  .ribbon .badge{background:var(--gold);color:#000;padding:8px 12px;border-radius:8px;font-weight:800}
+.burger{display:none;font-size:26px;background:none;border:none;color:#fff}
 
-  .section-title{color:var(--gold);text-align:center;font-size:28px;margin:8px 0 18px}
+/* HERO */
+.hero{
+  height:420px;display:flex;align-items:center;justify-content:center;text-align:center;
+  background:linear-gradient(0deg,rgba(0,0,0,0.55),rgba(0,0,0,0.25)),
+  url('assets/IMG_5768.jpeg') center/cover no-repeat;
+}
+.hero h2{font-family:"Playfair Display";color:var(--gold);font-size:34px;margin-bottom:12px}
+.hero p{color:#ddd;margin-bottom:20px}
+.cta{border:2px solid var(--gold);color:var(--gold);padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600}
 
-  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-  .svc{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-  .svc h3{color:var(--gold);margin:0 0 8px}
-  .svc p{color:var(--muted);margin:0}
+/* SECTION */
+.section{padding:60px 0}
+.section-title{text-align:center;color:var(--gold);font-family:"Playfair Display";font-size:30px;margin-bottom:26px}
 
-  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
-  .project{position:relative;height:170px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
-  .project img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-  .project:hover img{transform:scale(1.06)}
-  .project .label{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.55);padding:8px 12px;border-radius:8px;color:var(--gold);font-weight:700}
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#111;border:1px solid rgba(255,255,255,0.05);padding:20px;border-radius:10px}
+.card h4{color:var(--gold);margin-bottom:10px}
 
-  .about p{color:#d0d0d0;text-align:center;max-width:900px;margin:0 auto}
+/* PROJECTS */
+.projects-row{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.project{width:230px;background:#111;border-radius:10px;overflow:hidden;cursor:pointer}
+.project img{width:100%;height:150px;object-fit:cover}
+.project p{text-align:center;margin:10px;color:var(--gold)}
 
-  .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:16px;margin-top:18px}
-  .contact-card{background:linear-gradient(180deg,#0f0f0f,#0b0b0b);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-  .contact-card p{color:var(--muted);margin:8px 0}
-  input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #222;background:#070707;color:#fff;margin-top:8px}
-  .contact-card button{background:var(--gold);color:#000;border:none;padding:12px;border-radius:8px;font-weight:800;cursor:pointer;margin-top:12px;width:100%}
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:8px;cursor:pointer}
 
-  .map-wrap{margin-top:18px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.04)}
-  .map-actions{display:flex;gap:10px;justify-content:center;margin-top:10px}
+/* ABOUT */
+.about p{text-align:center;max-width:900px;margin:0 auto 16px;color:#ddd}
+.about small{text-align:center;display:block;margin-top:10px;color:#bbb}
 
-  footer{padding:22px;text-align:center;color:#9b9b9b;margin-top:30px;background:#050505}
+/* CONTACT */
+.contact-form{max-width:900px;margin:auto;display:flex;flex-direction:column;gap:12px}
+.contact-row{display:flex;gap:12px}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:#0a0a0a;color:#fff
+}
+.btn-outline{padding:10px 14px;border-radius:8px;border:1px solid #666;color:#aaa;text-decoration:none}
 
-  /* whatsapp pill */
-  .wa-pill{position:fixed;left:16px;bottom:16px;background:var(--gold);color:#000;padding:12px 16px;border-radius:999px;font-weight:800;z-index:200;box-shadow:0 18px 40px rgba(0,0,0,0.25);display:flex;gap:10px;align-items:center}
+/* FOOTER */
+.footer{padding:20px 0;text-align:center;color:#777;background:#050505;margin-top:40px}
 
-  @media(max-width:900px){
-    .contact-grid{grid-template-columns:1fr}
-    nav{display:none}
-    .hero h1{font-size:28px}
-  }
+/* MODAL */
+#modal{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:none;justify-content:center;align-items:center}
+#modal img{max-width:92%;max-height:92%;border-radius:10px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:700px){
+  .burger{display:block}
+  .nav{display:none;position:absolute;top:70px;right:10px;background:#111;padding:12px;border-radius:10px;flex-direction:column}
+  .services-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
+
 <body>
 
-  <header>
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
     <div class="brand">
-      <div class="logo-mark">SR</div>
-      <div class="title">Shahzad Rajput152</div>
+      <div class="logo-box">SR</div>
+      <div>
+        <h1>SHAHZAD RAJPUT152</h1>
+        <p>Construction Company — Lake City Lahore</p>
+      </div>
     </div>
 
-    <nav aria-label="Main">
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a class="btn-gold" href="https://www.google.com/maps/search/?api=1&query=Lake+City+Lahore">Get Directions</a>
     </nav>
-  </header>
 
-  <!-- HERO SLIDER -->
-  <section class="hero" aria-label="Hero">
-    <!-- slides (inserted by JS) -->
-    <div class="inner">
-      <h1>Shahzad Rajput152 Construction Company</h1>
-      <p>Premium Construction &amp; Architectural Services in Pakistan — We specialize in 10 Marla to 1 Kanal modern & luxury homes.</p>
-      <div class="ctas">
-        <a class="btn btn-primary" href="#contact">Get Free Consultation</a>
-        <a class="btn btn-ghost" href="#projects">View Projects</a>
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div>
+    <h2>Premium Construction & Luxury Finishing</h2>
+    <p>Delivering high-end homes in Lake City Lahore</p>
+    <a class="cta" href="#contact">Get Free Consultation</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2 class="section-title">Our Luxury Services</h2>
+  <div class="container services-grid">
+    <div class="card"><h4>Grey Structure</h4><p>Premium structure with top-grade material.</p></div>
+    <div class="card"><h4>Turnkey Construction</h4><p>Complete luxury finishing & interiors.</p></div>
+    <div class="card"><h4>Architectural Design</h4><p>Modern + classical premium elevations.</p></div>
+    <div class="card"><h4>Interior Designing</h4><p>Kitchen, wardrobes, lighting layouts.</p></div>
+    <div class="card"><h4>3D Elevation & Plans</h4><p>Realistic visualisation & drawings.</p></div>
+    <div class="card"><h4>Renovation</h4><p>Transforming old homes into luxury spaces.</p></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section" style="background:#070707;">
+  <h2 class="section-title">Recent Projects</h2>
+  <div class="container projects-row">
+    <div class="project"><img src="assets/IMG_5768.jpeg"><p>10 Marla House</p></div>
+    <div class="project"><img src="assets/IMG_5770.jpeg"><p>1 Kanal Villa</p></div>
+    <div class="project"><img src="assets/IMG_5771.jpeg"><p>Interior Renovation</p></div>
+    <div class="project"><img src="assets/IMG_5772.jpeg"><p>Commercial Design</p></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <h2 class="section-title">Gallery</h2>
+  <div class="container gallery-grid">
+    <img src="assets/IMG_5773.jpeg">
+    <img src="assets/IMG_5774.jpeg">
+    <img src="assets/IMG_5775.jpeg">
+    <img src="assets/IMG_5776.jpeg">
+    <img src="assets/IMG_5777.jpeg">
+    <img src="assets/IMG_5778.jpeg">
+    <img src="assets/IMG_5796.png">
+    <img src="assets/IMG_5797.jpeg">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section" style="background:#070707;">
+  <h2 class="section-title">About Us</h2>
+  <div class="container about">
+    <p>Shahzad Rajput152 Construction Company is a premium construction & architectural firm based in Lake City Lahore. We specialise in luxury homes, turnkey projects and modern architectural design.</p>
+    <small>Location: <a href="https://www.google.com/maps/search/?api=1&query=Lake+City+Lahore" style="color:var(--gold)">Lake City Lahore</a></small>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2 class="section-title">Contact / Request Consultation</h2>
+  <div class="container">
+    <form class="contact-form" onsubmit="return false;">
+      <div class="contact-row">
+        <input type="text" placeholder="Name" required>
+        <input type="text" placeholder="Phone / WhatsApp" required>
       </div>
-    </div>
-  </section>
-
-  <main class="panel">
-    <div class="ribbon"><div class="badge">5 YEARS</div><div style="color:#fff;font-weight:700">Comprehensive Warranty — Turnkey Projects</div></div>
-
-    <h2 id="services" class="section-title">Our Luxury Services</h2>
-    <div class="services">
-      <div class="svc"><h3>Grey Structure Construction</h3><p>Premium materials, licensed engineering and strict quality controls.</p></div>
-      <div class="svc"><h3>Turnkey Construction</h3><p>Complete finishing, MEP & interiors — handover-ready homes.</p></div>
-      <div class="svc"><h3>Architectural Design</h3><p>Modern & classical elevations and construction-ready 3D plans.</p></div>
-      <div class="svc"><h3>Interior Designing</h3><p>Luxury kitchens, wardrobes, ceiling treatments & lighting design.</p></div>
-      <div class="svc"><h3>3D Elevation & Plans</h3><p>Photo-real renders and detailed drawings for approvals.</p></div>
-      <div class="svc"><h3>Renovation & Remodeling</h3><p>Turn old spaces into modern, premium living areas.</p></div>
-    </div>
-
-    <h2 id="projects" class="section-title">Recent Projects</h2>
-    <div class="projects-grid" id="projectsGrid">
-      <!-- JS populates projects using your uploaded Project-1.. files -->
-    </div>
-
-    <h2 id="about" class="section-title">About Us</h2>
-    <div class="about"><p>Shahzad Rajput152 Construction Company is a premium construction and architectural firm based in Lake City, Lahore. We deliver luxury homes, turnkey solutions and modern architecture with transparency, timeline focus and quality finishes.</p></div>
-
-    <h2 id="contact" class="section-title">Contact & Visit</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3 style="color:var(--gold);margin:0 0 8px">Get a Free Consultation</h3>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/923032609097" target="_blank">+92 303 2609097</a></p>
-        <p><strong>Email:</strong> <a href="mailto:shahzad152152@gmail.com">shahzad152152@gmail.com</a></p>
-        <p><strong>Address:</strong> Lake City, Lahore, Pakistan</p>
-        <div class="map-wrap" id="mapWrap">
-          <!-- iframe map will be injected by JS -->
-        </div>
-        <div class="map-actions">
-          <a class="btn btn-ghost" id="openMap" target="_blank" rel="noopener">Open in Google Maps</a>
-          <a class="btn btn-primary" id="directions" target="_blank" rel="noopener">Get Directions</a>
-        </div>
+      <textarea rows="5" placeholder="Project details (area, size, location)"></textarea>
+      <div class="contact-row">
+        <button class="btn-gold" style="border:none;cursor:pointer;">Send Message</button>
+        <a class="btn-outline" href="https://www.google.com/maps/search/?api=1&query=Lake+City+Lahore">Get Directions</a>
       </div>
+    </form>
+  </div>
+</section>
 
-      <div class="contact-card">
-        <form id="leadForm">
-          <input name="name" placeholder="Your Name" required />
-          <input name="phone" placeholder="Phone / WhatsApp" required />
-          <textarea name="message" rows="5" placeholder="Brief project details..." required></textarea>
-          <button type="submit">Send Inquiry</button>
-          <p id="formMsg" style="color:var(--muted);margin-top:8px;font-size:14px"></p>
-        </form>
-      </div>
-    </div>
+<!-- FOOTER -->
+<footer class="footer">
+  © Shahzad Rajput152 Construction Company — Lake City Lahore
+</footer>
 
-  </main>
-
-  <footer>© <span id="year"></span> Shahzad Rajput152 Construction Company — Premium Builders Lahore</footer>
-
-  <!-- WhatsApp pill -->
-  <a class="wa-pill" href="https://wa.me/923032609097" target="_blank" aria-label="WhatsApp chat">Chat with us</a>
+<!-- MODAL -->
+<div id="modal"><img id="modalImg"></div>
 
 <script>
-  // ====== CONFIG: list your uploaded image filenames here (assets folder) ======
-  // You said you will name/upload them Project-1.jpg, Project-2.jpg ... Project-20.jpg
-  const total = 12; // set how many project images you uploaded (adjust if you uploaded more)
-  const images = [];
-  for(let i=1;i<=total;i++){
-    images.push(`assets/Project-${i}.jpg`);
+// mobile menu
+document.getElementById("burger").onclick = ()=>{
+  const nav=document.getElementById("nav");
+  nav.style.display = nav.style.display==="flex" ? "none" : "flex";
+};
+
+// image modal
+const modal=document.getElementById("modal");
+const modalImg=document.getElementById("modalImg");
+
+document.querySelectorAll(".project img, .gallery-grid img").forEach(img=>{
+  img.onclick=()=>{
+    modalImg.src=img.src;
+    modal.style.display="flex";
   }
-  // If you have PNG or different names, add them manually, e.g.
-  // images.push('assets/Project-13.png');
-
-  // ====== HERO SLIDES setup (use first 3 images as hero slides) ======
-  const hero = document.querySelector('.hero');
-  function createHeroSlides(){
-    const slides = [];
-    const use = images.slice(0,3);
-    use.forEach((src, i)=>{
-      const d = document.createElement('div');
-      d.className = 'slide' + (i===0? ' show':'' );
-      d.style.backgroundImage = `url("${src}")`;
-      hero.insertBefore(d, hero.firstChild); // insert under content
-      slides.push(d);
-    });
-    return slides;
-  }
-  const heroSlides = createHeroSlides();
-  let hIndex = 0;
-  setInterval(()=> {
-    heroSlides[hIndex].classList.remove('show');
-    hIndex = (hIndex+1)%heroSlides.length;
-    heroSlides[hIndex].classList.add('show');
-  },3800);
-
-  // ====== populate projects grid ======
-  const projectsGrid = document.getElementById('projectsGrid');
-  const labels = [
-    "10 Marla Modern House",
-    "1 Kanal Luxury Villa",
-    "Interior Renovation",
-    "Commercial Design",
-    "Modern Elevation",
-    "Renovation Project",
-    "Luxury Finishes",
-    "Structural Works",
-    "Site & Team",
-    "Carpentry Works",
-    "Electrical & MEP",
-    "Landscape & Exterior"
-  ];
-  for(let i=0;i<images.length;i++){
-    const card = document.createElement('div');
-    card.className = 'project';
-    const img = document.createElement('img');
-    img.src = images[i];
-    img.alt = labels[i] || `Project ${i+1}`;
-    card.appendChild(img);
-    const span = document.createElement('div');
-    span.className = 'label';
-    span.textContent = labels[i] || `Project ${i+1}`;
-    card.appendChild(span);
-    projectsGrid.appendChild(card);
-  }
-
-  // ====== Map (Lake City, Lahore) - iframe + open/directions links ======
-  // We use a reliable Google Maps query so clicking "Open" or "Directions" opens Maps app/web with Lake City, Lahore
-  const placeQuery = encodeURIComponent('Lake City Lahore Pakistan');
-  const mapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${placeQuery}`;
-  const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${placeQuery}`;
-
-  // inject iframe (centered at Lake City approximate coordinates)
-  const mapWrap = document.getElementById('mapWrap');
-  const iframe = document.createElement('iframe');
-  iframe.width = '100%';
-  iframe.height = '220';
-  iframe.style.border = '0';
-  // approximate coordinates for Lake City Lahore -> 31.473°N, 74.258°E (approx)
-  iframe.src = "https://www.google.com/maps?q=31.473,74.258&z=15&output=embed";
-  iframe.loading = 'lazy';
-  mapWrap.appendChild(iframe);
-
-  // set links
-  document.getElementById('openMap').href = mapsSearchUrl;
-  document.getElementById('directions').href = mapsDirectionsUrl;
-
-  // ====== contact form (mailto fallback) ======
-  document.getElementById('leadForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const f = new FormData(this);
-    const name = f.get('name').trim();
-    const phone = f.get('phone').trim();
-    const msg = f.get('message').trim();
-    if(!name || !phone || !msg){ document.getElementById('formMsg').textContent='Please fill all fields.'; return; }
-    const subject = encodeURIComponent('Website Inquiry from ' + name);
-    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\n\nMessage:\n${msg}`);
-    window.location.href = `mailto:shahzad152152@gmail.com?subject=${subject}&body=${body}`;
-    this.reset();
-    document.getElementById('formMsg').textContent='Opening your email client...';
-  });
-
-  // footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
+});
+modal.onclick=()=>modal.style.display="none";
 </script>
 
 </body>
