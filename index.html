@@ -6,17 +6,17 @@
 <title>Shahzad Rajput152 Construction Company | Luxury Builder Lahore</title>
 
 <style>
+/* -------- GLOBAL STYLE -------- */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: #0e0e0e;
   color: #f2f2f2;
 }
-
 h1, h2, h3 { font-weight: 600; margin: 0; }
 section { padding: 50px 20px; max-width: 1200px; margin: auto; }
 
-/* HEADER */
+/* -------- HEADER -------- */
 header {
   background: #000;
   padding: 20px;
@@ -25,25 +25,14 @@ header {
   align-items: center;
   border-bottom: 2px solid #b29149;
 }
-
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #b29149;
-  letter-spacing: 1px;
+.logo img {
+  height: 55px;
+  width: auto;
 }
 
-nav a {
-  color: #f2f2f2;
-  margin-left: 20px;
-  text-decoration: none;
-  font-size: 14px;
-}
-nav a:hover { color: #b29149; }
-
-/* HERO */
+/* -------- HERO -------- */
 .hero {
-  background: url('images/pic1.jpg') no-repeat center/cover;
+  background: url('735BC6C1-1A94-4206-A9AE-3AFCDC78B126.jpeg') no-repeat center/cover;
   padding: 160px 20px;
   text-align: center;
   position: relative;
@@ -52,12 +41,21 @@ nav a:hover { color: #b29149; }
   content:"";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.65);
 }
 .hero-content { position: relative; z-index: 2; }
-.hero h1 { font-size: 42px; color: #fff; text-transform: uppercase; }
-.hero p { margin-top: 10px; font-size: 18px; color: #ddd; }
+.hero-logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.hero p { font-size: 18px; color: #ddd; margin-top: 10px; }
 
+/* BUTTON */
 .btn {
   margin-top: 20px;
   display: inline-block;
@@ -76,7 +74,6 @@ nav a:hover { color: #b29149; }
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
-
 .service-box {
   background: #1a1a1a;
   padding: 25px;
@@ -89,36 +86,22 @@ nav a:hover { color: #b29149; }
   transform: translateY(-5px);
 }
 .service-box h3 { color: #b29149; }
-.service-box p { color: #ccc; }
 
-/* PROJECTS */
+/* PROJECTS + GALLERY */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 15px;
 }
-
 .project {
   height: 200px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  position: relative;
   box-shadow: 0 0 10px #000;
 }
 
-.project span {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.7);
-  padding: 6px 12px;
-  border-radius: 5px;
-  color: #b29149;
-  font-weight: 600;
-}
-
-/* CONTACT */
+/* -------- CONTACT -------- */
 .contact-box {
   background: #1a1a1a;
   padding: 30px;
@@ -135,7 +118,6 @@ nav a:hover { color: #b29149; }
   background: #111;
   color: #fff;
 }
-
 .contact-box button {
   margin-top: 15px;
   width: 100%;
@@ -147,6 +129,7 @@ nav a:hover { color: #b29149; }
   border-radius: 6px;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 25px;
@@ -159,12 +142,15 @@ footer {
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <div class="logo">SR152 CONSTRUCTION</div>
+  <div class="logo">
+    <img src="A_website_homepage_screenshot_for_Shahzad_Rajput15.png" alt="SR152 Logo">
+  </div>
   <nav>
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
-    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -172,7 +158,8 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Shahzad Rajput152 Construction Company</h1>
+    <img src="A_website_homepage_screenshot_for_Shahzad_Rajput15.png" class="hero-logo">
+    <h1>Shahzad Rajput 152 Construction</h1>
     <p>Premium Construction • Architecture • Luxury Finishing — Lake City Lahore</p>
     <a class="btn" href="#contact">Get Free Consultation</a>
   </div>
@@ -183,107 +170,51 @@ footer {
   <h2 style="color:#b29149; text-align:center;">Our Luxury Services</h2>
   <div class="services-grid">
 
-    <div class="service-box">
-      <h3>Grey Structure Construction</h3>
-      <p>Premium quality materials with professional engineering.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Turnkey Construction</h3>
-      <p>Complete finishing with luxury interiors and fittings.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Architectural Design</h3>
-      <p>Modern, classical & premium house elevations.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Interior Designing</h3>
-      <p>Luxury kitchen, wardrobes, ceilings & lighting layouts.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>3D Elevation & Plans</h3>
-      <p>Top-quality realistic visuals and structural drawings.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Renovation & Remodeling</h3>
-      <p>Transforming old homes into modern luxury spaces.</p>
-    </div>
+    <div class="service-box"><h3>Grey Structure Construction</h3><p>Premium quality materials with professional engineering.</p></div>
+    <div class="service-box"><h3>Turnkey Construction</h3><p>Luxury finishing, premium interiors & fittings.</p></div>
+    <div class="service-box"><h3>Architectural Design</h3><p>Modern, classic and high-end architectural concepts.</p></div>
+    <div class="service-box"><h3>Interior Designing</h3><p>Luxury kitchens, wardrobes, ceilings & smart lighting.</p></div>
+    <div class="service-box"><h3>3D Designs</h3><p>High-quality realistic 3D visuals for your dream home.</p></div>
+    <div class="service-box"><h3>Renovation Services</h3><p>Transforming old homes into modern luxury spaces.</p></div>
 
   </div>
 </section>
 
-<!-- PROJECTS WITH YOUR 10 IMAGES -->
+<!-- PROJECTS -->
 <section id="projects">
   <h2 style="color:#b29149; text-align:center;">Recent Projects</h2>
-
   <div class="projects-grid">
-
-    <div class="project" style="background-image:url('images/pic1.jpg');">
-      <span>Project 01</span>
-    </div>
-
-    <div class="project" style="background-image:url('images/pic2.jpg');">
-      <span>Project 02</span>
-    </div>
-
-    <div class="project" style="background-image:url('images/pic3.jpg');">
-      <span>Project 03</span>
-    </div>
-
-    <div class="project" style="background-image:url('images/pic4.jpg');">
-      <span>Project 04</span>
-    </div>
-
-    <div class="project" style="background-image:url('images/pic5.jpg');">
-      <span>Project 05</span>
-    </div>
-
-    <div class="project" style="background-image:url('images/pic6.jpg');">
-      <span>Project 06</span>
-    </div>
-
-    <div class="project" style="background-image:url('images/pic7.jpg');">
-      <span>Project 07</span>
-    </div>
-
-    <div class="project" style="background-image:url('images/pic8.jpg');">
-      <span>Project 08</span>
-    </div>
-
-    <div class="project" style="background-image:url('images/pic9.jpg');">
-      <span>Project 09</span>
-    </div>
-
-    <div class="project" style="background-image:url('images/pic10.jpg');">
-      <span>Project 10</span>
-    </div>
-
+    <div class="project" style="background-image:url('7D667965-F943-45BE-A2CC-2BC6FBC8B761.jpeg');"></div>
+    <div class="project" style="background-image:url('FCF036E3-4A7C-4CD8-BEB8-CE9C3B92917D.jpeg');"></div>
+    <div class="project" style="background-image:url('F72524C6-3B07-4853-A426-A4CAC0F508FA.jpeg');"></div>
+    <div class="project" style="background-image:url('8076E779-8DED-46D0-BCAB-CBB02443C527.jpeg');"></div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2 style="color:#b29149; text-align:center;">About Us</h2>
-  <p style="max-width:800px; margin:auto; text-align:center; color:#ccc;">
-    Shahzad Rajput152 Construction Company is a premium construction and
-    architectural firm based in Lake City Lahore.
-    We specialize in luxury houses, turnkey projects, and modern architecture with
-    a commitment to quality, honesty, and innovation.
-  </p>
+<!-- GALLERY -->
+<section id="gallery">
+  <h2 style="color:#b29149; text-align:center;">Our Work Gallery</h2>
+  <div class="projects-grid">
+    <div class="project" style="background-image:url('735BC6C1-1A94-4206-A9AE-3AFCDC78B126.jpeg');"></div>
+    <div class="project" style="background-image:url('7D667965-F943-45BE-A2CC-2BC6FBC8B761.jpeg');"></div>
+    <div class="project" style="background-image:url('FCF036E3-4A7C-4CD8-BEB8-CE9C3B92917D.jpeg');"></div>
+    <div class="project" style="background-image:url('F72524C6-3B07-4853-A426-A4CAC0F508FA.jpeg');"></div>
+    <div class="project" style="background-image:url('8076E779-8DED-46D0-BCAB-CBB02443C527.jpeg');"></div>
+    <div class="project" style="background-image:url('6350E04A-B3F8-4697-AFF7-85BF7834D27E.jpeg');"></div>
+    <div class="project" style="background-image:url('40AF4C04-C8F7-47D7-B0B0-2417C6DE68B8.jpeg');"></div>
+    <div class="project" style="background-image:url('218E05C0-CEBC-44AE-A9EF-5FB87FB532A4.jpeg');"></div>
+    <div class="project" style="background-image:url('E38B5C02-B2C9-42F6-B3D9-8F05F6C01634.jpeg');"></div>
+    <div class="project" style="background-image:url('52732206-F916-4432-9FC5-5F60C2CB6AEE.jpeg');"></div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <h2 style="color:#b29149; text-align:center;">Contact Us</h2>
-
   <div class="contact-box">
     <p><strong>WhatsApp:</strong> +92 303 2609097</p>
     <p><strong>Email:</strong> shahzad152152@gmail.com</p>
-    <p><strong>Address:</strong> Lake City, Lahore, Pakistan</p>
+    <p><strong>Address:</strong> Lake City, Lahore</p>
 
     <form>
       <input type="text" placeholder="Your Name" required />
@@ -295,7 +226,7 @@ footer {
 </section>
 
 <footer>
-  © 2025 Shahzad Rajput152 Construction Company — Premium Builders Lahore
+© 2025 Shahzad Rajput152 Construction Company — Premium Builders Lahore
 </footer>
 
 </body>
