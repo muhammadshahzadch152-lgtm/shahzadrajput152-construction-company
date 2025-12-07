@@ -1,151 +1,298 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shahzad Rajput152 Construction Company — Lake City Lahore</title>
-  <meta name="description" content="Shahzad Rajput152 Construction Company | House Builders, Architects, Renovation — Lake City, Lahore" />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-  <style>
-    :root{
-      --accent:#2c6fb7;
-      --dark:#0f1720;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --shadow: 0 6px 18px rgba(15,23,32,0.08);
-      --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:#f6f7fb;color:var(--dark);-webkit-font-smoothing:antialiased}
-    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:8px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
-    h1{font-size:20px;margin:0}
-    .contact{font-size:14px;text-align:right}
-    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
-    .hero{margin-top:18px;background:linear-gradient(90deg, rgba(44,111,183,0.08), rgba(44,111,183,0));padding:22px;border-radius:12px;box-shadow:var(--shadow)}
-    .hero h2{margin:0 0 8px 0;font-size:18px}
-    .cols{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}
-    @media(min-width:800px){.cols{grid-template-columns:2fr 1fr}}
-    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:var(--shadow)}
-    .services ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .services li{background:#f3f6fb;padding:8px;border-radius:8px;font-size:14px}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-    .proj{height:120px;border-radius:8px;background:#ddd;display:flex;align-items:flex-end;padding:10px;color:#111;font-weight:700}
-    footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
-    .contact-list{display:flex;flex-direction:column;gap:6px}
-    form{display:flex;flex-direction:column;gap:8px}
-    input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6e9f0;font-size:14px}
-    textarea{min-height:90px;resize:vertical}
-    .muted{color:var(--muted);font-size:14px}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shahzad Rajput152 Construction Company | Luxury Builder Lahore</title>
+
+<style>
+/* -------- GLOBAL STYLE -------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #0e0e0e;
+  color: #f2f2f2;
+}
+
+h1, h2, h3 { font-weight: 600; margin: 0; }
+
+section { padding: 50px 20px; max-width: 1200px; margin: auto; }
+
+/* -------- HEADER -------- */
+header {
+  background: #000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #b29149;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #b29149;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #f2f2f2;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+nav a:hover { color: #b29149; }
+
+/* -------- HERO SECTION -------- */
+.hero {
+  background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=60')
+      no-repeat center/cover;
+  padding: 140px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content:"";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 38px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #cccccc;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #b29149;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.btn:hover { filter: brightness(1.2); }
+
+/* -------- SERVICES -------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.service-box {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+.service-box:hover {
+  border-color: #b29149;
+  transform: translateY(-5px);
+}
+
+.service-box h3 { color: #b29149; }
+.service-box p { color: #ccc; }
+
+/* -------- PROJECTS -------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.project {
+  height: 180px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: 0 0 10px #000;
+}
+
+.project span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.7);
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: #b29149;
+  font-weight: 600;
+}
+
+/* -------- CONTACT -------- */
+.contact-box {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
+}
+
+.contact-box button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #b29149;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* -------- FOOTER -------- */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #999;
+  background: #000;
+  margin-top: 40px;
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">SR</div>
-        <div>
-          <h1>Shahzad Rajput152 Construction Company</h1>
-          <div class="muted">House Builders • Architects • Renovation — Lake City, Lahore</div>
-        </div>
-      </div>
-      <div class="contact">
-        <div><strong>WhatsApp:</strong> +92 303 2609097</div>
-        <div><strong>Email:</strong> shahzad152152@gmail.com</div>
-      </div>
-    </header>
 
-    <section class="hero card">
-      <h2>Construction You Can Trust — We Build Your Dream Home</h2>
-      <p class="muted">High quality residential & commercial construction, transparent estimates, on-time delivery.</p>
-      <div style="margin-top:12px">
-        <a class="btn" href="#contact">Get Free Consultation</a>
-      </div>
-    </section>
+<!-- HEADER -->
+<header>
+  <div class="logo">SR152 CONSTRUCTION</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <div class="cols">
-      <main>
-        <section class="card" style="margin-top:16px">
-          <h3 style="margin:0 0 10px 0">Our Services</h3>
-          <div class="services">
-            <ul>
-              <li>Grey Structure Construction</li>
-              <li>Turnkey / Full Finishing</li>
-              <li>Architecture Design</li>
-              <li>3D Elevation & Floor Plans</li>
-              <li>Interior Designing</li>
-              <li>Commercial & Residential</li>
-              <li>Renovation & Remodeling</li>
-              <li>Material Estimation & BOQs</li>
-            </ul>
-          </div>
-        </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Shahzad Rajput152 Construction Company</h1>
+    <p>Premium Construction • Architecture • Luxury Finishing — Lake City Lahore</p>
+    <a class="btn" href="#contact">Get Free Consultation</a>
+  </div>
+</section>
 
-        <section class="card" style="margin-top:16px">
-          <h3 style="margin:0 0 10px 0">Recent Projects</h3>
-          <div class="projects">
-            <div class="proj" style="background-image:linear-gradient(0deg,rgba(0,0,0,0.25),transparent), url(''); background-size:cover">5 Marla Modern House</div>
-            <div class="proj" style="">10 Marla Designer House</div>
-            <div class="proj" style="">1 Kanal Luxury House</div>
-            <div class="proj" style="">Interior Renovation</div>
-          </div>
-          <div class="muted" style="margin-top:8px">(Add your project photos by replacing placeholders.)</div>
-        </section>
+<!-- SERVICES -->
+<section id="services">
+  <h2 style="color:#b29149; text-align:center;">Our Luxury Services</h2>
+  <div class="services-grid">
 
-        <section class="card" style="margin-top:16px">
-          <h3 style="margin:0 0 10px 0">About Us</h3>
-          <p class="muted">Shahzad Rajput152 Construction Company is a Lake City Lahore based construction & architecture firm delivering modern designs and reliable construction services. We focus on quality materials, transparent estimation and client satisfaction.</p>
-          <ul style="margin:8px 0 0 16px">
-            <li>Experienced team</li>
-            <li>Transparent pricing</li>
-            <li>Quality materials & workmanship</li>
-            <li>On-time project delivery</li>
-          </ul>
-        </section>
-      </main>
-
-      <aside>
-        <div class="card" id="contact">
-          <h3 style="margin:0 0 10px 0">Contact Us</h3>
-          <div class="contact-list">
-            <div><strong>WhatsApp:</strong> +92 303 2609097</div>
-            <div><strong>Email:</strong> shahzad152152@gmail.com</div>
-            <div><strong>Address:</strong> Lake City, Lahore, Pakistan</div>
-          </div>
-
-          <form action="https://formspree.io/f/your-id" method="POST" style="margin-top:12px">
-            <!-- Replace form action with your Formspree or other endpoint or remove action to use mailto/WhatsApp -->
-            <input name="name" placeholder="Your Name" required>
-            <input name="phone" placeholder="Phone / WhatsApp" required>
-            <input name="email" placeholder="Email" type="email">
-            <select name="project">
-              <option value="">Select Project Type</option>
-              <option>Grey Structure</option>
-              <option>Turnkey / Finishing</option>
-              <option>Interior Renovation</option>
-              <option>Architectural Design</option>
-            </select>
-            <textarea name="message" placeholder="Your message"></textarea>
-            <button class="btn" type="submit" style="border:none;margin-top:6px">Send Message</button>
-          </form>
-
-          <div style="margin-top:12px" class="muted">Or message directly on WhatsApp: <a href="https://wa.me/923032609097" target="_blank">+92 303 2609097</a></div>
-        </div>
-
-        <div class="card" style="margin-top:12px">
-          <h4 style="margin:0 0 8px 0">Quick Info</h4>
-          <div class="muted">License / Registration: Provide details here once available.</div>
-        </div>
-      </aside>
+    <div class="service-box">
+      <h3>Grey Structure Construction</h3>
+      <p>Premium quality materials with professional engineering.</p>
     </div>
 
-    <footer>
-      © <span id="yr"></span> Shahzad Rajput152 Construction Company — Lake City, Lahore
-    </footer>
-  </div>
+    <div class="service-box">
+      <h3>Turnkey Construction</h3>
+      <p>Complete finishing with luxury interiors and fittings.</p>
+    </div>
 
-  <script>document.getElementById('yr').innerText = new Date().getFullYear()</script>
+    <div class="service-box">
+      <h3>Architectural Design</h3>
+      <p>Modern, classical & premium house elevations.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Interior Designing</h3>
+      <p>Luxury kitchen, wardrobes, ceilings & lighting layouts.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>3D Elevation & Plans</h3>
+      <p>Top-quality realistic visuals and structural drawings.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Renovation & Remodeling</h3>
+      <p>Transforming old homes into modern luxury spaces.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 style="color:#b29149; text-align:center;">Recent Projects</h2>
+  
+  <div class="projects-grid">
+    <div class="project" style="background-image:url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600');">
+      <span>10 Marla Modern House</span>
+    </div>
+
+    <div class="project" style="background-image:url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=600');">
+      <span>1 Kanal Luxury Villa</span>
+    </div>
+
+    <div class="project" style="background-image:url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=600');">
+      <span>Interior Renovation</span>
+    </div>
+
+    <div class="project" style="background-image:url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600');">
+      <span>Commercial Design</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 style="color:#b29149; text-align:center;">About Us</h2>
+  <p style="max-width:800px; margin:auto; text-align:center; color:#ccc;">
+    Shahzad Rajput152 Construction Company is a premium construction and
+    architectural firm based in Lake City Lahore.  
+    We specialize in luxury houses, turnkey projects, & modern architecture with
+    a commitment to quality, honesty, and innovation.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 style="color:#b29149; text-align:center;">Contact Us</h2>
+
+  <div class="contact-box">
+    <p><strong>WhatsApp:</strong> +92 303 2609097</p>
+    <p><strong>Email:</strong> shahzad152152@gmail.com</p>
+    <p><strong>Address:</strong> Lake City, Lahore, Pakistan</p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="text" placeholder="Phone / WhatsApp" required />
+      <textarea placeholder="Your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Shahzad Rajput152 Construction Company — Premium Builders Lahore
+</footer>
+
 </body>
 </html>
